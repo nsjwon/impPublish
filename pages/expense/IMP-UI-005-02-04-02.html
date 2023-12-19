@@ -15,17 +15,11 @@
     <title>Edit Corp Card Settlement</title>
 
     <script>
-    $(document).ready(function() {
-        const Editor = toastui.Editor;
-
-        const editor = new Editor({
-                el: document.querySelector('#editor'),
-                height: '200px',
-                initialEditType: 'markdown',
-                previewStyle: 'vertical'
-            });
-
-        editor.getMarkdown();
+    $(document).ready(function () {
+        $("#btn-designate").click(function () {
+            // 새 창을 여는 코드
+            var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=860');
+        });
     });
     </script>
 </head>

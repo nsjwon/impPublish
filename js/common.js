@@ -492,3 +492,13 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 })
+
+
+
+//DESIGNATE버튼 페이지 연결
+$(document).ready(function () {
+    $("#btn-designate").click(function () {
+        // 새 창을 여는 코드
+        var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=860');
+    });
+});

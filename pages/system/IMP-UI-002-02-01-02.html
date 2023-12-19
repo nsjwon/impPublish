@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <title>Add Menu Information</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="popup-content-wrap">
+            <div class="edit-title">
+                <h5 class="flex-al">Add Menu Information</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
+                </div>
+            </div>
+            <section class="popup-edit">
+                <div class="edit-wrap">
+                    <fieldset class="form">
+                        <label>Menu ID
+                            <input type="text" name="mid">
+                        </label>
+                        <label>Menu Name
+                            <input type="text" name="reqno">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Upper Menu
+                            <select name="um">
+                            </select>
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Menu Url Info
+                            <input type="text" name="Date">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Tab Menu ID
+                            <input type="text" name="Date" value="110001" readonly>
+                        </label>
+                        <label>Tab Menu Name
+                            <input type="text" name="Date">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Menu Sort
+                            <input type="text" name="Date" value="112" readonly>
+                        </label>
+                        <label>Use Y/N
+                            <input type="text" name="Date" value="Y">
+                        </label>
+                    </fieldset>
+                    
+                </div>
+                <div class="l-btnwrap mt40 big-button">
+                    <button id="btn-save">
+                        SAVE
+                    </button>
+                    <a id="btn-close" href="#none" onClick='self.close()'>
+                        CLOSE
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

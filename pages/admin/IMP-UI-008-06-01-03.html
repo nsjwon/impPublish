@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <title>New Approval Line</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="popup-content-wrap">
+            <div class="edit-title">
+                <h5 class="flex-al">New Approval Line</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
+                </div>
+            </div>
+            <section class="popup-contents">
+                <div class="edit-wrap mt20">
+                    <div class="form-line">
+                        <fieldset class="form">
+                            <label>
+                                <select name="top">
+                                    <option value="1">2023</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </label>
+                            <label>
+                                <select name="top">
+                                    <option value="1">9</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </label>
+                            <label>
+                                <input type="date" name="text">
+                            </label>
+                            <label>
+                                <input type="text" name="text" value="00:00:00">
+                            </label>
+                            <label>
+                                <input type="date" name="text">
+                            </label>
+                            <label>
+                                <input type="text" name="text" value="00:00:00">
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="edit-wrap">
+                    <div class="edit-half">
+                        <div class="pop-list-02 pop-listbox">
+                            <div class="e-list flex-col">
+                                <div class="e-sub-title">
+                                    <h5 class="pb10">Organization</h5>
+                                </div>
+                                <div class="e-list-inner">
+                                    <table class="orgz-table">
+                                        <caption class="hide">리스트</caption>
+                                        <colgroup>
+                                            <col style="width: 100%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-1">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>Glovis Europe GmbH</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-2">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>GEU Vienna Branch</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-2">
+                                                    <div class="opener">
+                                                        <button class="btn-folder open"></button>
+                                                        <span>FVL Div. 1</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-3">
+                                                    <div class="opener">
+                                                        <button class="btn-folder open"></button>
+                                                        <span>SCM Dept.</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-4">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>HMMC Team</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-4">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>KaSK Team</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-4">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>Short Sea Team</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="e-list flex-col">
+                                <div class="e-list-btnbox">
+                                    <select name="word">
+                                        <option value="keyword">keyword</option>
+                                    </select>
+                                    <input type="text" placeholder="Enter search term">
+                                    <button class="btn-search">Search</button>
+                                </div>
+                                <div class="e-list-inner">
+                                    <table class="result_table noselect">
+                                        <caption class="hide">리스트</caption>
+                                        <colgroup>
+                                            <col style="width: 8%;">
+                                            <col style="width: 20%;">
+                                            <col style="width: 36%;">
+                                            <col style="width: 36%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Dept</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apl-btn-area">
+                            <a href="#none" class="btn-approve">Approve</a>
+                            <a href="#none" class="btn-cooperation">Pre Cooperation</a>
+                            <a href="#none" class="btn-References">References</a>
+                        </div>
+                        <div class="pop-list-03">
+                            <div class="pop-listbox">
+                                <div class="e-list flex-col">
+                                    <div class="e-sub-title">
+                                        <h5>Approve</h5>
+                                        <select name="final">
+                                            <option value="1">Final Approval</option>
+                                            <option value="2">Final Approval</option>
+                                        </select>
+                                    </div>
+                                    <div class="e-list-inner">
+                                        <table class="result_table noselect">
+                                            <caption class="hide">리스트</caption>
+                                            <colgroup>
+                                                <col style="width: 8%;">
+                                                <col style="width: 23%;">
+                                                <col style="width: 23%;">
+                                                <col style="width: 23%;">
+                                                <col style="width: 23%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Approver</th>
+                                                    <th>Position</th>
+                                                    <th>Deputy</th>
+                                                    <th>Edit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Verena Jauch</td>
+                                                    <td>Manager</td>
+                                                    <td></td>
+                                                    <td class="aline-edit">
+                                                        <div>
+                                                            <a href="#none" class="btnc-down"></a>
+                                                        </div>
+                                                        <a href="#none" class="btn-del"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Rorah rain</td>
+                                                    <td>Senior Manager</td>
+                                                    <td></td>
+                                                    <td class="aline-edit">
+                                                        <div>
+                                                            <a href="#none" class="btnc-up"></a>
+                                                            <a href="#none" class="btnc-down"></a>
+                                                        </div>
+                                                        <a href="#none" class="btn-del"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Euisoo Roh</td>
+                                                    <td>Senior Manager</td>
+                                                    <td></td>
+                                                    <td class="aline-edit">
+                                                        <div>
+                                                            <a href="#none" class="btnc-up"></a>
+                                                        </div>
+                                                        <a href="#none" class="btn-del"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pop-listbox">
+                                <div class="e-list flex-col">
+                                    <div class="e-sub-title">
+                                        <h5>Pre Cooperation</h5>
+                                    </div>
+                                    <div class="e-list-inner">
+                                        <table class="result_table noselect">
+                                            <caption class="hide">리스트</caption>
+                                            <colgroup>
+                                                <col style="width: 12%;">
+                                                <col style="width: 65%;">
+                                                <col style="width: 23%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Name</th>
+                                                    <th>Edit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Gildong Hong</td>
+                                                    <td class="aline-edit">
+                                                        <a href="#none" class="btn-del"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>David choi</td>
+                                                    <td class="aline-edit">
+                                                        <a href="#none" class="btn-del"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Cavin Jeon</td>
+                                                    <td class="aline-edit">
+                                                        <a href="#none" class="btn-del"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pop-listbox">
+                                <div class="e-list flex-col">
+                                    <div class="e-sub-title">
+                                        <h5>References</h5>
+                                    </div>
+                                    <div class="e-list-inner">
+                                        <table class="result_table noselect">
+                                        <caption class="hide">리스트</caption>
+                                        <colgroup>
+                                            <col style="width: 8%;">
+                                            <col style="width: 23%;">
+                                            <col style="width: 23%;">
+                                            <col style="width: 23%;">
+                                            <col style="width: 23%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Dept</th>
+                                                <th>Edit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>John Kim</td>
+                                                <td>Manager</td>
+                                                <td>IT 2 Team</td>
+                                                <td class="aline-edit">
+                                                    <a href="#none" class="btn-del"></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jake Lee</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                                <td class="aline-edit">
+                                                    <a href="#none" class="btn-del"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        
+                    <div class="l-btnwrap mt10">
+                        <button id="btn-save">
+                            SAVE
+                        </button>
+                        <a id="btn-close" href="#none" onClick='self.close()'>
+                            CLOSE
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

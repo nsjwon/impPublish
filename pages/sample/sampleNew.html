@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <title>Sample page - New</title>
+
+    <script>
+    $(document).ready(function() {
+        const Editor = toastui.Editor;
+
+        const editor = new Editor({
+                el: document.querySelector('#editor'),
+                height: '300px',
+                initialEditType: 'markdown',
+                previewStyle: 'vertical'
+            });
+
+        editor.getMarkdown();
+    });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav id="sidemenu">
+            <h1 id="logo">
+                <a href="../../IMP-UI-001-00-00-00.html">
+                    <img src="../../images/imp_logo.svg" alt="HYUNDAI GLOVIS IMP(Integrated Employee Portal)">
+                </a>
+            </h1>
+            <ul class="one-depth">
+                <li class="d1 one-menu"><a href="../../IMP-UI-001-00-00-00.html"><span>Home</span></a></li>
+                <li class="d1">
+                    <a href="#none"><span>System</span></a>
+                    <ul class="two-depth">
+                        <li class="d2">
+                            <a href="#none">User</a>
+                            <ul class="three-depth">
+                                <li><a href="../system/user-management.html">User Management</a></li>
+                                <li><a href="../system/user-log.html">User log</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Authority</a>
+                            <ul class="three-depth">
+                                <li><a href="../system/menu-management.html">Menu Management</a></li>
+                                <li><a href="../system/role-management.html">Role Management</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2 one-menu"><a href="../system/common-code.html">Common Code</a></li>
+                        <li class="d2 one-menu"><a href="../system/system-message.html">System Message</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>My menu</span></a>
+                    <ul class="two-depth">
+                        <li class="d2">
+                            <a href="#none">Private Box</a>
+                            <ul class="three-depth">
+                                <li><a href="../mymenu/request-for-approval.html">Request for Approval</a></li>
+                                <li><a href="../mymenu/private-pending.html">Overdue Tasks</a></li>
+                                <li><a href="../mymenu/private-inbound.html">New Tasks</a></li>
+                                <li><a href="../mymenu/outbound-list.html">Active Tasks</a></li>
+                                <li><a href="../mymenu/drafts-list.html">Ready Tasks</a></li>
+                                <li><a href="../mymenu/deputy-approval.html">Deputy approval</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Department Box</a>
+                            <ul class="three-depth">
+                                <li><a href="../mymenu/dept-pending-list.html">Overded Tasks</a></li>
+                                <li><a href="../mymenu/dept-inbound-list.html">New Tasks</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Community</a>
+                            <ul class="three-depth">
+                                <li><a href="../mymenu/news-list.html">News</a></li>
+                                <li><a href="../mymenu/info-desk-list.html">Info Desk</a></li>
+                                <li><a href="../mymenu/management-system-list.html">Management System</a></li>
+                                <li><a href="../mymenu/legal-and-compliance-list.html">Legal and Compliance</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2"><a href="../mymenu/information.html">Information</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Order</span></a>
+                    <ul class="two-depth">
+                        <li class="d2"><a href="../order/order-request-list.html">Order Request(PR)</a></li>
+                        <li class="d2"><a href="../order/order-Plan-list.html">Order Plan(PO)</a></li>
+            
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Expense</span></a>
+                    <ul class="two-depth">
+                        <li class="d2"><a href="../expense/expense-plan-list.html">Expense plan(ER)</a></li>
+                        <li class="d2"><a href="../expense/expense-settlement-list.html">Expense settlement(EO)</a></li>
+                        <li class="d2"><a href="../order/Corp-card-settlement-list.html">Corp.card Settlement</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Biz-Trip</span></a>
+                    <ul class="two-depth">
+                        <li class="d2"><a href="../biztrip/bt-plan-list.html">BT plan</a></li>
+                        <li class="d2"><a href="../biztrip/bt-settlement-list.html">BT Settlement</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>e-Ticket</span></a>
+                    <ul class="two-depth">
+                        <li class="d2"><a href="../eticket/dash-board-list.html">Dashboard</a></li>
+                        <li class="d2"><a href="../eticket/new-ticket-view.html">New Ticket</a></li>
+                        <li class="d2"><a href="../eticket/tickets-list.html">Tickets</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Admin</span></a>
+                    <ul class="two-depth">
+                        <li class="d2">
+                            <a href="#none">Master</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/org-management-list.html">Organization Management</a></li>
+                                <li><a href="../admin/company-management-list.html">Company Management</a></li>
+                                <li><a href="../admin/group-master-list.html">Group Master(SAP)</a></li>
+                                <li><a href="../admin/vat-code-list.html">VAT Code</a></li>
+                                <li><a href="../admin/request-mapping-list.html">Request Mapping</a></li>
+                                <li><a href="../admin/corp-card-management-list.html">Corp.card management</a></li>
+                                <li><a href="../admin/delivery-management-list.html">Delivery Management</a></li>
+                                <li><a href="../admin/vendor-customer-list.html">Vender/Customer</a></li>
+                                <li><a href="../admin/bt-expense-list.html">BT Expense Master</a></li>
+                                <li><a href="../admin/approval-line-list.html">Approval Line</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Account</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/glaccount-list.html">G/L Account</a></li>
+                                <li><a href="../admin/monthly-closing-deadline-list.html">Monthly closing deadline</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Expense booking</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/journalizing-list.html">Journalizing</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">E-doc</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/edoc-list.html">E-doc</a></li>
+                                <li><a href="../admin/sap-reverse-edoc.html">Sap Reverse E-doc</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Report</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/org-management-history.html">Organization Management History</a></li>
+                                <li><a href="../admin/vc-history.html">Vendor/Customer history</a></li>
+                                <li><a href="../admin/e-mail-history.html">E-mail History</a></li>
+                                <li><a href="../admin/sap-master-if-history.html">SAP Master I/F History</a></li>
+                                <li><a href="../admin/sap-booking-history.html">SAP Booking History</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2"><a href="#../admin/news-admin-list.html">News</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p id="nav-copyright">Copyright © 2018 HYUNDAI GLOVIS</p>
+        </nav>
+        <div class="sub-content-wrap">
+            <header>
+                <h1 id="logo-mobile" class="mobile-style">
+                    <a href="../IMP-UI-001-00-00-00.html">
+                        <img src="../../images/logo_mobile.svg" alt="HYUNDAI GLOVIS IMP(Integrated Employee Portal)">
+                    </a>
+                </h1>
+                <a href="#none" class="header-icon side-fold"></a>
+                <a href="../IMP-UI-001-00-00-00.html" class="mobile-home">
+                    <img src="../../images/ic_mobile-home3.svg" alt="홈메뉴">
+                </a>
+                <div class="header-util flex-bt">
+                    <a class="id-info">
+                        <em>Stephanie Lee</em>
+                        <span>IT 2 Team</span>
+                    </a>
+                    <ul class="icon-area">
+                        <li><a href="#none" class="header-icon header-icon1"></a></li>
+                        <li><a href="#none" class="header-icon header-icon2"></a></li>
+                        <li><a href="login.html" class="header-icon header-icon3"></a></li>
+                    </ul>
+                    <div class="settings settings1">
+                        <div class="settings-box settings-box1">
+                            <ul class="setting-content">
+                                <li><a href="#none">Profile</a></li>
+                                <li><a href="#none">History</a></li>
+                            </ul>
+                            <ul class="more">
+                                <li>
+                                    <a href="#none">Lock
+                                        <img src="../../images/ic_setting-lock.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="settings settings2">
+                        <div class="settings-box settings-box2">
+                            <p>Pending</p>
+                            <ul class="setting-content">
+                                <li>
+                                    <a href="#none">
+                                        <strong href="#none">Alejandro Torvisco Carralero</strong>
+                                        Alejandro Torvisco Missing Holidays remaining
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <strong href="#none">Alejandro Torvisco Carralero</strong>
+                                        Alejandro Torvisco Missing Holidays remaining
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="more">
+                                <li>
+                                    <a href="#none">More
+                                        <img src="../../images/ic_setting-more.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger-wrap mobile-style-flex" id="hamburgerBtn">
+                    <a href="#" class="hamburger"><span></span></a>
+                </div>
+            </header>
+            <div class="menutab">
+                <ul>
+                    <li><a href="#none">Home</a></li>
+                    <li class="on"><a href="#none">Order Request<i class="tab-close"></i></a></li>
+                    <li><a href="#none">New Request</a></li>
+                    <li><a href="#none">Expense Settlement</a></li>
+                    <li><a href="#none">New Ticket</a></li>
+                    <li><a href="#none">Approval</a></li>
+                </ul>
+            </div>
+            <section class="sub-contents">
+                <ul class="menutree">
+                    <li>Order</li>
+                    <li> > </li>
+                    <li>Request(PR)</li>
+                    <li> > </li>
+                    <li>Order Request</li>
+                </ul>
+                <div class="edit-title">
+                    <h4 class="flex-al"><img src="../../images/ots01.svg" alt="menu icon">New Request</h4>
+                    <div class="l-btnwrap">
+                        <a id="btn-rfa" class="btn-effect" href="#none">RFA</a>
+                        <button id="btn-save">
+                            SAVE
+                        </button>
+                        <a id="btn-close" href="../sample/sampleList.html">
+                            CLOSE
+                        </a>
+                    </div>
+                </div>
+                <div class="edit-wrap">
+                    <fieldset class="form">
+                        <label for="title">Title
+                            <input type="text" name="title" id="ex-title" value="correction fluid">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label for="title">Title
+                            <input type="text" name="title" id="ex-title" value="correction fluid" readonly/>
+                        </label>
+                        <label for="title">
+                            <input type="text" name="title" id="ex-title" value="correction fluid" readonly/>
+                        </label>
+                        <label for="title">
+                            <input type="date" name="title" id="ex-title">
+                        </label>
+                        <label for="title">
+                            <input type="text" name="title" id="ex-title" value="correction fluid" readonly/>
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label for="title">Title
+                            <input type="text" name="title" id="ex-title" value="correction fluid">
+                        </label>
+                        <label for="title">Title
+                            <input type="text" name="title" id="ex-title" value="correction fluid">
+                        </label>
+                        <label for="title">Title
+                            <input type="text" name="title" id="ex-title" value="correction fluid">
+                        </label>
+                        <label for="chck" class="c-label">
+                            <input type="checkbox" class="m-chck" name="chck">
+                            <span>IMP</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label for="title">Title
+                            <input type="text" name="title" id="ex-title" value="correction fluid">
+                        </label>
+                        <label for="title">Title
+                            <input type="text" name="title" id="ex-title" value="correction fluid">
+                        </label>
+                        <label for="title">
+                            <input type="text" name="title" id="ex-title" value="correction fluid" readonly/>
+                        </label>
+                    </fieldset>
+                    <div class="e-title">
+                        <h5>Status - Deactivated ｜ User Type - Internal User</h5>
+                        <div class="e-btns">
+                            <label><input type="radio" name="usertype" id="ust1" checked/><span>Internal User</span></label>
+                            <label><input type="radio" name="usertype" id="ust2"><span>External User</span></label>
+                            <label><input type="radio" name="usertype" id="ust3"><span>Test User</span></label>
+                        </div>
+                    </div>
+                    <fieldset class="form">
+                        <div class="form-b">
+                            <label>User ID
+                                <input type="text" name="" id="" value="DE00000" readonly/>
+                            </label>
+                            <button class="e-submit">DUP.CHECK</button>
+                        </div>
+                        <div class="form-b">
+                            <label>Email
+                                <input type="text" name="" id="" value="asbdfs@email.com">
+                            </label>
+                            <button class="e-submit">DUP.CHECK</button>
+                        </div>
+                        <label>Emp.No
+                            <input type="text" name="" id="" value="DE00000" readonly/>
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>First Name
+                            <input type="text" name="" id="" value="Flelix">
+                        </label>
+                        <label>Middle Name
+                            <input type="text" name="" id="" value="">
+                        </label>
+                        <label>Last Name
+                            <input type="text" name="" id="" value="Kim">
+                        </label>
+                    </fieldset>
+                    <div class="add-wrap">
+                        <div>
+                            <div class="add-field">
+                                <a href="#none" class="del-btn"></a>
+                                <fieldset class="form">
+                                    <label>Company
+                                        <input type="text" name="" id="" value="GEU">
+                                    </label>
+                                    <label>Department
+                                        <input type="text" name="" id="" value="Department">
+                                    </label>
+                                    <label>Position
+                                        <input type="text" name="" id="" value="Position">
+                                    </label>
+                                </fieldset>
+                                <fieldset class="form">
+                                    <label>DUTY
+                                        <select name="" id="">
+                                            <option value="">DUTY</option>
+                                            <option value="">DUTY</option>
+                                            <option value="">DUTY</option>
+                                        </select>
+                                    </label>
+                                    <label>DUTY OPTION
+                                        <input type="text" name="" id="" value="">
+                                    </label>
+                                    <label>TITLE
+                                        <select name="" id="">
+                                            <option value="">Title</option>
+                                            <option value="">Title</option>
+                                            <option value="">Title</option>
+                                        </select>
+                                    </label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <button id="btn-add">
+                            ADD
+                        </button>
+                    </div>
+                    <fieldset class="form">
+                        <label>Contact(Phone)
+                            <input type="text" name="" id="" value="+49 69273166724">
+                        </label>
+                        <label>Contact(Mobile)
+                            <input type="text" name="" id="" value="+49 69273166724">
+                        </label>
+                        <label>Contact(Fax)
+                            <input type="text" name="" id="" value="+49 69273166724">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Time Zone
+                            <select name="" id="">CET
+                                <option value="">Time Zone</option>
+                                <option value="">Time Zone</option>
+                                <option value="">Time Zone</option>
+                            </select>
+                        </label>
+                        <label>Status
+                            <select name="" id="">Deactivated
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </label>
+                        <label></label>
+                    </fieldset>
+                    <fieldset class="form-c tem2">
+                        <p class="field-title">Necessary System to use</p>
+                        <div class="c-labelbox">
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>IMP</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>VLOGIS</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>GENISYS</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>GTMSe</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>EXCHANGE</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>BI</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div id="editor"></div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+
+
+
+    
+    <!-- 햄버거 메뉴 -->
+    <div id="all-menu">
+        <div class="all-menu-util">
+            <div class="header-util-mobile flex-bt">
+                    <a class="id-info-mobile">
+                        <em>Stephanie Lee</em>
+                        <span>IT 2 Team</span>
+                    </a>
+                    <ul class="icon-area">
+                        <li><a href="#none" class="header-icon header-icon1"></a></li>
+                        <li><a href="#none" class="header-icon header-icon2"></a></li>
+                        <li><a href="login.html" class="header-icon header-icon3"></a></li>
+                    </ul>
+                </div>
+        </div>
+        <nav>
+            <ul class="a-depth1">
+                <li class="focus"><a href="#none"><img src="../../images/m-menu01.svg" alt="">System</a></li>
+                <li><a href="#none"><img src="../../images/m-menu02.svg" alt="">My menu</a></li>
+                <li><a href="#none"><img src="../../images/m-menu03.svg" alt="">Order</a></li>
+                <li><a href="#none"><img src="../../images/m-menu04.svg" alt="">Expense</a></li>
+                <li><a href="#none"><img src="../../images/m-menu05.svg" alt="">Biz-Trip</a></li>
+                <li><a href="#none"><img src="../../images/m-menu06.svg" alt="">e-Ticket</a></li>
+                <li><a href="#none"><img src="../../images/m-menu07.svg" alt="">Admin</a></li>
+            </ul>
+            <div class="a-targetbox">
+                <div id="target1" class="a-target active">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">User</a>
+                            <ul class="a-depth3">
+                                <li><a href="../system/usermanagementList.html">User Management</a></li>
+                                <li><a href="../system/userlogList.html">User log</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Authority</a>
+                            <ul class="a-depth3">
+                                <li><a href="../system/programView.html">Program</a></li>
+                                <li><a href="../system/assignmentView.html">Assignment</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">System management</a>
+                            <ul class="a-depth3">
+                                <li><a href="../system/mastercodeList.html">Master code</a></li>
+                                <li><a href="../system/commoncodeList.html">Common code</a></li>
+                                <li><a href="../system/systemmessageList.html">System message</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="target2" class="a-target">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">Private Box</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/requestforapprovalView.html">Request for Approval</a></li>
+                                <li><a href="../mymenu/privatepandingList.html">Pending</a></li>
+                                <li><a href="../mymenu/privateinboundList.html">Inbound</a></li>
+                                <li><a href="../mymenu/outboundList.html">Outbound</a></li>
+                                <li><a href="../mymenu/draftsList.html">Drafts</a></li>
+                                <li><a href="../mymenu/deputyapprovalList.html">Deputy approval</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Department Box</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/departmentpendingList.html">Pending</a></li>
+                                <li><a href="../mymenu/departmentinboundList.html">Inbound</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Community</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/noticeList.html">Notice</a></li>
+                                <li><a href="../mymenu/boardList.html">Board</a></li>
+                                <li><a href="../mymenu/qmsList.html">QMS</a></li>
+                                <li><a href="../mymenu/policiesandproceduresList.html">Policies and Procedures</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Profile</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/profileView.html">Profile</a></li>
+                                <li><a href="../mymenu/historyList.html">History</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="target3" class="a-target">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">Request(PR)</a>
+                            <ul class="a-depth3">
+                                <li><a href="../order/orderrequestList.html">Order Request</a></li>
+                                <li><a href="../order/newrequestView.html">New Request</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Order(PO)</a>
+                            <ul class="a-depth3">
+                                <li><a href="../order/orderlistList.html">Order list</a></li>
+                                <li><a href="../order/neworderView.html">New Order</a></li>
+                                <li><a href="../order/orderplacementList.html">Order Placement</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="target4" class="a-target">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">Expense plan(ER)</a>
+                            <ul class="a-depth3">
+                                <li><a href="../expense/expenseplanlistList.html">Expense plan list</a></li>
+                                <li><a href="../expense/newplanView.html">New plan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Expense settlement(EO)</a>
+                            <ul class="a-depth3">
+                                <li><a href="../expense/settlementlistList.html">Settlement list</a></li>
+                                <li><a href="../expense/newsettlementView.html">New Settlement</a></li>
+                                <li><a href="../expense/confirmsettlementList.html">Confirm Settlement</a></li>
+                                <li><a href="../expense/corpcardsettlementList.html">Corp.card Settlement</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="target5" class="a-target">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">BT plan</a>
+                            <ul class="a-depth3">
+                                <li><a href="../biztrip/biztripplanList.html">Biz-Trip plan</a></li>
+                                <li><a href="../biztrip/newbtplanView.html">New BT plan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">BT settlement</a>
+                            <ul class="a-depth3">
+                                <li><a href="../biztrip/btsettlementList.html">BT settlement</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="target6" class="a-target">
+                    <ul class="a-depth2">
+                        <li class="d2"><a href="../eticket/dashboardList.html">Dashboard</a></li>
+                        <li class="d2"><a href="../eticket/newticketView.html">New Ticket</a></li>
+                        <li class="d2"><a href="../eticket/ticketsList.html">Tickets</a></li>
+                    </ul>
+                </div>
+                <div id="target7" class="a-target">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">Mater</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/journalmappingList.html">Journal Mapping</a></li>
+                                <li><a href="../admin/organizationmanagementList.html">Organization Management</a></li>
+                                <li><a href="../admin/organizationmanagehistoryList.html">Organization Manage History</a></li>
+                                <li><a href="../admin/companymanagementList.html">Company Management</a></li>
+                                <li><a href="../admin/timezonemanagementList.html">Timezone Management</a></li>
+                                <li><a href="../admin/groupmasterList.html">Group Master(SAP)</a></li>
+                                <li><a href="../admin/vatmanagementList.html">VAT Management</a></li>
+                                <li><a href="../admin/requestmappingList.html">Request Mapping</a></li>
+                                <li><a href="../admin/corpcardmanagementList.html">Corp.card management</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Account</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/glaccountList.html">G/L Account</a></li>
+                                <li><a href="../admin/monthlyclosingdeadlineList.html">Monthly closing deadline</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Purchase</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/itemmasterList.html">Item Master</a></li>
+                                <li><a href="../admin/deliverymanagementList.html">Delivery Management</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Vendor/Customer(Master)</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/vendorcustomerlistList.html">Vendor/Customer list</a></li>
+                                <li><a href="../admin/newvendorcustomerView.html">New Vendor/Customer</a></li>
+                                <li><a href="../admin/modifyvendorcustomerModify.html">Modify Vendor/Customer</a></li>
+                                <li><a href="../admin/vendorcustomerhistoryList.html">Vendor/Customer history</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Business Trip</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/btexpensemasterList.html">BT Expense Master</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Approval Mgnt</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/approvallineList.html">Approval line</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Expense booking</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/journalizingincomingList.html">Journalizing(incoming)</a></li>
+                                <li><a href="../admin/journalizingoutgoingList.html">Journalizing(outgoing)</a></li>
+                                <li><a href="../admin/journalizingdetailsDetail.html">Journalizing details</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">E-doc</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/edoclistList.html">E-doc list</a></li>
+                                <li><a href="../admin/edocupdownloadView.html">E-doc up/download</a></li>
+                                <li><a href="../admin/edocmanagementView.html">E-doc management</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Report</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/edochistoryList.html">E-mail History</a></li>
+                                <li><a href="../admin/sapmasterifhistoryList.html">SAP Master I/F History</a></li>
+                                <li><a href="../admin/sapbookinghistory.List.html">SAP Booking History</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Notice</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/noticeList.html">Notice</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

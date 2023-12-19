@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <title>New Message Code</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="popup-content-wrap">
+            <div class="edit-title noborder">
+                <h5>New Message Code</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
+                </div>
+            </div>
+            <section class="popup-contents">
+                <div class="result_area">
+                    <table class="result_table">
+                        <caption class="hide">List</caption>
+                        <colgroup>
+                            <col style="width: 10%;">
+                            <col style="width: 25%;">
+                            <col style="width: 25%;">
+                            <col style="width: 10%;">
+                            <col style="width: 25%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>Code</th>
+                                <th>Code Name</th>
+                                <th>Use Y/N</th>
+                                <th>Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EN</td>
+                                <td><input type="text"></td>
+                                <td>
+                                    <input type="text" class="mb10"><br>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <select name="cn">
+                                        <option value="Y">Y</option>
+                                        <option value="N">n</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="mb10"><br>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EN</td>
+                                <td><input type="text"></td>
+                                <td>
+                                    <input type="text" class="mb10"><br>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <select name="cn">
+                                        <option value="Y">Y</option>
+                                        <option value="N">n</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="mb10"><br>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page-wrap">
+                    <div></div>
+                    <ul class="pagination">
+                        <li>
+                            <a href="#none" class="btn-page first-page"></a>
+                            <a href="#none" class="btn-page prev-page"></a>
+                        </li>
+                        <li>
+                            <a href="#none" class="btn-page page-num selected">1</a>
+                            <a href="#none" class="btn-page page-num">2</a>
+                            <a href="#none" class="btn-page page-num">3</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="btn-page next-page"></a>
+                            <a href="#none" class="btn-page last-page"></a>
+                        </li>
+                    </ul>
+                    <div class="result-count">
+                        <span>Total <strong>112</strong>&nbsp; <span class="txtcol6">|</span> &nbsp;Page <strong>1/4</strong></span>
+                    </div>
+                </div>
+                
+                <div class="l-btnwrap big-button mt40">
+                    <button id="btn-add">
+                        ADD
+                    </button>
+                    <button id="btn-save">
+                        SAVE
+                    </button>
+                    <a id="btn-close" href="#none" onClick='self.close()'>
+                        CLOSE
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

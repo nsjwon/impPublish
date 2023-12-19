@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css">
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <title>Settlement Detail</title>
+
+    <script>
+    $(document).ready(function () {
+        $(".ic_lens").click(function () {
+            // 새 창을 여는 코드
+            var popupWindow = window.open('../expense/IMP-UI-005-01-01-02.html', '_blank', 'width=1400, height=1080');
+        });
+    });
+
+    $(document).ready(function() {
+        const Editor = toastui.Editor;
+
+        const editor = new Editor({
+                el: document.querySelector('#editor'),
+                height: '200px',
+                initialEditType: 'markdown',
+                previewStyle: 'vertical'
+            });
+
+        editor.getMarkdown();
+    });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav id="sidemenu">
+            <h1 id="logo">
+                <a href="../../IMP-UI-001-00-00-00.html">
+                    <img src="../../images/imp_logo.svg" alt="HYUNDAI GLOVIS IMP(Integrated Employee Portal)">
+                </a>
+            </h1>
+            <ul class="one-depth">
+                <li class="d1 one-menu"><a href="../../IMP-UI-001-00-00-00.html"><span>Home</span></a></li>
+                <li class="d1">
+                    <a href="#none"><span>System</span></a>
+                    <ul class="two-depth">
+                        <li class="d2">
+                            <a href="#none">User</a>
+                            <ul class="three-depth">
+                                <li><a href="../system/IMP-UI-002-01-01-01.html">User Management</a></li>
+                                <li><a href="../system/IMP-UI-002-01-02-01.html">User log</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Authority</a>
+                            <ul class="three-depth">
+                                <li><a href="../system/IMP-UI-002-02-01-01.html">Menu Management</a></li>
+                                <li><a href="../system/IMP-UI-002-02-02-01.html">Role Management</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Code</a>
+                            <ul class="three-depth">
+                                <li><a href="../system/IMP-UI-002-03-02-01.html">Common Code</a></li>
+                                <li><a href="../system/IMP-UI-002-03-02-02.html">Master Group Code</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2 one-menu"><a href="../system/IMP-UI-002-03-03-01.html">Message</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>My menu</span></a>
+                    <ul class="two-depth">
+                        <li class="d2">
+                            <a href="#none">Private Box</a>
+                            <ul class="three-depth">
+                                <li><a href="../mymenu/IMP-UI-003-01-01-01.html">Request for Approval</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-02-01.html">Pending</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-03-01.html">Inbound</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-04-01.html">Outbound</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-05-01.html">Overdue</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-06-01.html">Deputy Approval</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Department Box</a>
+                            <ul class="three-depth">
+                                <li><a href="../mymenu/IMP-UI-003-02-01-01.html">Department Pending</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-02-02-01.html">Inbound</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Community</a>
+                            <ul class="three-depth">
+                                <li><a href="../mymenu/IMP-UI-003-03-01-01.html">News</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-03-02-01.html">Info Desk</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-03-03-01.html">Management System</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-03-04-01.html">Legal and Compliance</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">My Profile</a>
+                            <ul class="three-depth">
+                                <li><a href="../mymenu/IMP-UI-003-04-01-01.html">Profile</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Order</span></a>
+                    <ul class="two-depth">
+                        <li class="d2 one-menu"><a href="../order/IMP-UI-004-01-01-01.html">Order Request(PR)</a></li>
+                        <li class="d2 one-menu"><a href="../order/IMP-UI-004-02-01-01.html">Order Plan(PO)</a></li>
+            
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Expense</span></a>
+                    <ul class="two-depth">
+                        <li class="d2 one-menu"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
+                        <li class="d2 one-menu"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
+                        <li class="d2 one-menu"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Biz-Trip</span></a>
+                    <ul class="two-depth">
+                        <li class="d2 one-menu"><a href="../biztrip/IMP-UI-006-01-01-01.html">BT plan</a></li>
+                        <li class="d2 one-menu"><a href="../biztrip/IMP-UI-006-02-01-01.html">BT Settlement</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>e-Ticket</span></a>
+                    <ul class="two-depth">
+                        <li class="d2 one-menu"><a href="../eticket/IMP-UI-007-01-01-01.html">Dashboard</a></li>
+                        <li class="d2 one-menu"><a href="../eticket/IMP-UI-007-02-01-01.html">New Ticket</a></li>
+                        <li class="d2 one-menu"><a href="../eticket/IMP-UI-007-03-01-01.html">Tickets</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>E-doc</span></a>
+                    <ul class="two-depth">
+                        <li class="d2 one-menu"><a href="../admin/IMP-UI-008-08-01-01.html">E-doc</a></li>
+                        <li class="d2 one-menu"><a href="../admin/IMP-UI-008-08-02-01.html">E-doc based SAP</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Vendor/Customer</span></a>
+                    <ul class="two-depth">
+                        <li class="d2 one-menu"><a href="../admin/IMP-UI-008-04-01-01.html">Vendor/ Customer</a></li>
+                        <li class="d2 one-menu"><a href="../admin/IMP-UI-008-04-04-01.html">Vendor/Customer History</a></li>
+                    </ul>
+                </li>
+                <li class="d1">
+                    <a href="#none"><span>Admin</span></a>
+                    <ul class="two-depth">
+                        <li class="d2">
+                            <a href="#none">Master</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/IMP-UI-008-01-02-01.html">Organization Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-04-01.html">Company Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-06-01.html">Group Master(SAP)</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-07-01.html">VAT Code</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-08-01.html">Request Mapping</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-09-01.html">Corp Card Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-03-02-01.html">Delivery Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-05-01-01.html">BT Expense Master</a></li>
+                                <li><a href="../admin/IMP-UI-008-06-01-01.html">Approval Line</a></li>
+                                <li><a href="../admin/IMP-UI-008-11-01-01.html">Master Code</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Account</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/IMP-UI-008-02-01-01.html">G/L Account</a></li>
+                                <li><a href="../admin/IMP-UI-008-02-01-01.html">Monthly Closing Deadline</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Expense booking</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/IMP-UI-008-07-01-01.html">Journalizing List</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Report</a>
+                            <ul class="three-depth">
+                                <li><a href="../admin/IMP-UI-008-01-03-01.html">Organization Management History</a></li>
+                                <li><a href="../admin/IMP-UI-008-09-01-01.html">E-mail History</a></li>
+                                <li><a href="../admin/IMP-UI-008-09-02-01.html">SAP Master I/F History</a></li>
+                                <li><a href="../admin/IMP-UI-008-09-03-01.html">SAP Booking History</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2 one-menu"><a href="../admin/IMP-UI-008-10-01-01.html">News</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p id="nav-copyright">Copyright © 2018 HYUNDAI GLOVIS</p>
+        </nav>
+        <div class="sub-content-wrap">
+            <header>
+                <h1 id="logo-mobile" class="mobile-style">
+                    <a href="../IMP-UI-001-00-00-00.html">
+                        <img src="../../images/logo_mobile.svg" alt="HYUNDAI GLOVIS IMP(Integrated Employee Portal)">
+                    </a>
+                </h1>
+                <a href="#none" class="header-icon side-fold"></a>
+                <a href="../IMP-UI-001-00-00-00.html" class="mobile-home">
+                    <img src="../../images/ic_mobile-home3.svg" alt="홈메뉴">
+                </a>
+                <div class="header-util flex-bt">
+                    <a class="id-info">
+                        <em>Stephanie Lee</em>
+                        <span>IT 2 Team</span>
+                    </a>
+                    <ul class="icon-area">
+                        <li><a href="#none" class="header-icon header-icon1"></a></li>
+                        <li><a href="#none" class="header-icon header-icon2"></a></li>
+                        <li><a href="login.html" class="header-icon header-icon3"></a></li>
+                    </ul>
+                    <div class="settings settings1">
+                        <div class="settings-box settings-box1">
+                            <ul class="setting-content">
+                                <li><a href="#none">Profile</a></li>
+                                <li><a href="#none">History</a></li>
+                            </ul>
+                            <ul class="more">
+                                <li>
+                                    <a href="#none">Lock
+                                        <img src="../../images/ic_setting-lock.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="settings settings2">
+                        <div class="settings-box settings-box2">
+                            <p>Pending</p>
+                            <ul class="setting-content">
+                                <li>
+                                    <a href="#none">
+                                        <strong>Alejandro Torvisco Carralero</strong>
+                                        Alejandro Torvisco Missing Holidays remaining
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <strong>Alejandro Torvisco Carralero</strong>
+                                        Alejandro Torvisco Missing Holidays remaining
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="more">
+                                <li>
+                                    <a href="#none">More
+                                        <img src="../../images/ic_setting-more.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hamburger-wrap mobile-style-flex" id="hamburgerBtn">
+                    <a href="#" class="hamburger"><span></span></a>
+                </div>
+            </header>
+            <div class="menutab">
+                <ul>
+                    <li>
+                        <img src="../../images/ti-home.svg" alt="home"><a href="#none">Home</a><i class="tab-close"></i>
+                    </li>
+                    <li class="on">
+                        <img src="../../images/ti-expense.svg" alt="expense"><a href="#none">Expense Settlement(EO)</a><i class="tab-close"></i>
+                    </li>
+                    <li>
+                        <img src="../../images/ti-order.svg" alt="order"><a href="#none">New Order Request</a><i class="tab-close"></i>
+                    </li>
+                    <li>
+                        <img src="../../images/ti-biztrip.svg" alt="biztrip"><a href="#none">BT Settlement</a><i class="tab-close"></i>
+                    </li>
+                    <li>
+                        <img src="../../images/ti-eticket.svg" alt="e-Ticket"><a href="#none">Tickets</a><i class="tab-close"></i>
+                    </li>
+                </ul>
+            </div>
+            <section class="sub-contents">
+                <ul class="menutree">
+                    <li>Expense</li>
+                    <li> > </li>
+                    <li>Expense Settlement(EO)</li>
+                </ul>
+                <div class="edit-title">
+                    <h4 class="flex-al"><img src="../../images/ots-expense.svg" alt="expense">Expense Settlement Detail</h4>
+                    <div class="l-btnwrap">
+                        <a id="btn-edit" class="btn-blue" href="../expense/IMP-UI-005-02-01-03.html">
+                            EDIT
+                        </a>
+                        <a id="btn-close" href="../expense/IMP-UI-005-02-01-01.html">
+                            CLOSE
+                        </a>
+                    </div>
+                </div>
+                <div class="edit-wrap">
+                    <fieldset class="form">
+                        <label class="wide">Title
+                            <input type="text" name="title" value="Pen" readonly>
+                        </label>
+                        <label>Date
+                            <input type="text" name="docno" value="21-09-2023" readonly>
+                        </label>
+                        <label>Time Limit
+                            <input type="date" name="date" readonly>
+                        </label>
+                        <label>EO. No
+                            <input type="text" name="reqno" readonly>
+                        </label>
+                        <label>ER(PO). No
+                            <input type="text" name="reqno" readonly>
+                            <a href="#none" class="ic_lens"></a>
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Requestor
+                            <input type="text" name="requestor" value="Ninesoft" readonly>
+                        </label>
+                        <label>
+                            <input type="text" name="rqpo" value="Staff" readonly>
+                        </label>
+                        <label>
+                            <select name="word" disabled>
+                                <option value="1">140001 - IT</option>
+                                <option value="2">1</option>
+                                <option value="3">1</option>
+                            </select>
+                        </label>
+                        <label>
+                            <input type="text" name="title" value="Eschborn" readonly>
+                        </label>
+                        <label>Type
+                            <select name="type" disabled>
+                                <option value="1">Incoming</option>
+                                <option value="2">1</option>
+                                <option value="3">1</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Vendor
+                            <input type="text" name="vender" value="Vodafone GmbH" readonly>
+                        </label>
+                        <label>
+                            <input type="text" name="no" value="0800/1721234" readonly>
+                        </label>
+                        <label class="wide">
+                            <input type="text" name="no" value="Ferdinand-Braun-Platz 1, 40549, Duesseldorf" readonly>
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="edit-sub-wrap">
+                    <div class="e-title">
+                        <h5>Item</h5>
+                        <div class="l-btnwrap">
+                            <!-- <button class="btn-blue">
+                                SELECT ER/PO
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="result_area">
+                        <table class="result_table graybg noselect item-table">
+                            <caption class="hide">리스트</caption>
+                            <colgroup>
+                                <col style="width: 3%;">
+                                <col style="width: 8%;">
+                                <col style="width: 13%;">
+                                <col style="width: 8%;">
+                                <col style="width: 6%;">
+                                <col style="width: 3%;">
+                                <col style="width: 6%;">
+                                <col style="width: 4%;">
+                                <col style="width: 6%;">
+                                <col style="width: 4%;">
+                                <col style="width: 6%;">
+                                <col style="width: 6%;">
+                                <col style="width: 8%;">
+                                <col style="width: 6%;">
+                                <col style="width: 3%;">
+                                <col style="width: 4%;">
+                                <col style="width: 3%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Invoice Date</th>
+                                    <th>Classification</th>
+                                    <th>Description</th>
+                                    <th>vendor</th>
+                                    <th>Qty</th>
+                                    <th>Unit Price</th>
+                                    <th>Contry</th>
+                                    <th>Tax</th>
+                                    <th>input(%)</th>
+                                    <th>Tax Amount</th>
+                                    <th>Net Total</th>
+                                    <th>Gross Total</th>
+                                    <th>Payment</th>
+                                    <th>Person</th>
+                                    <th>Req.No</th>
+                                    <th>Split</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="input-type">
+                                    <td>1</td>
+                                    <td><input type="date" value="" readonly></td>
+                                    <td>
+                                        <select name="cf" class="line2" disabled>
+                                            <option value="of">Office supplies expense</option>
+                                            <option value="bp">Books and periodecals</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="Pen" readonly></td>
+                                    <td>MAX LOGISTIC GROUP SP.Z.O.O</td>
+                                    <td><input type="text" class="align-right" value="1" readonly></td>
+                                    <td><input type="text" class="align-right" value="1,000" readonly></td>
+                                    <td>
+                                        <select name="ct" disabled>
+                                            <option value="DE">DE</option>
+                                            <option value="N">N</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="tax" disabled>
+                                            <option value="di">Direct Input</option>
+                                            <option value="DirectInput">Direct Input</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="-" readonly></td>
+                                    <td>190</td>
+                                    <td>1,000</td>
+                                    <td><input type="text" value="1,190" readonly></td>
+                                    <td>
+                                        <select name="invoice" disabled>
+                                            <option value="invoice">invoice</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="0" readonly></td>
+                                    <td>ER2309220003</td>
+                                    <td><a href="#none" class="btn-split">SPLIT</a></td>
+                                </tr>
+                                <tr class="input-type">
+                                    <td>2</td>
+                                    <td><input type="date" value="" readonly></td>
+                                    <td>
+                                        <select name="cf" class="line2" disabled>
+                                            <option value="bp">Books and periodecals</option>
+                                            <option value="of">Office supplies expense</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="Pen" readonly></td>
+                                    <td>MAX LOGISTIC GROUP SP.Z.O.O</td>
+                                    <td><input type="text" value="1" readonly></td>
+                                    <td><input type="text" value="1,000" readonly></td>
+                                    <td>
+                                        <select name="ct" disabled>
+                                            <option value="DE">DE</option>
+                                            <option value="N">N</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="tax" disabled>
+                                            <option value="Y">19%</option>
+                                            <option value="DirectInput">Direct Input</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="-" readonly></td>
+                                    <td>190</td>
+                                    <td>1,000</td>
+                                    <td><input type="text" value="1,050" readonly></td>
+                                    <td>
+                                        <select name="invoice" disabled>
+                                            <option value="invoice">invoice</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="0" readonly></td>
+                                    <td>ER2309220003</td>
+                                    <td>SUB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>
+                <div class="edit-sub-wrap">
+                    <h5>Description</h5>
+                    <div id="editor"></div>
+                </div>
+                <div class="edit-sub-wrap">
+                    <div class="icon-title">
+                        <h5>Attachment</h5>
+                        <img src="../../images/ic_check-circle.svg" alt="">
+                    </div>
+                    <p class="mb20"><strong>Mandatory</strong> ｜ Invoice, Entertainment cost evidence</p>
+                    <div class="attach-wrap">
+                        <div class="attach-header">
+                            <div class="ah-file">File</div>
+                            <div class="ah-size">Size</div>
+                        </div>
+                        <div class="attach-body">
+                            <div class="ab-file over2lines">file.png</div>
+                            <div class="ab-size">19.6MB</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+    
+    <!-- 햄버거 메뉴 -->
+    <div id="all-menu">
+        <div class="all-menu-util">
+            <div class="header-util-mobile flex-bt">
+                    <a class="id-info-mobile">
+                        <em>Stephanie Lee</em>
+                        <span>IT 2 Team</span>
+                    </a>
+                    <ul class="icon-area">
+                        <li><a href="#none" class="header-icon header-icon1"></a></li>
+                        <li><a href="#none" class="header-icon header-icon2"></a></li>
+                        <li><a href="/IMP-UI-000-00-00-00.html" class="header-icon header-icon3"></a></li>
+                    </ul>
+                </div>
+        </div>
+        <nav>
+            <ul class="a-depth1">
+                <li class="focus"><a href="#none"><img src="../../images/m-menu01.svg" alt="System">System</a></li>
+                <li><a href="#none"><img src="../../images/m-menu02.svg" alt="My menu">My menu</a></li>
+                <li><a href="#none"><img src="../../images/m-menu03.svg" alt="Order">Order</a></li>
+                <li><a href="#none"><img src="../../images/m-menu04.svg" alt="Expense">Expense</a></li>
+                <li><a href="#none"><img src="../../images/m-menu05.svg" alt="Biz-Trip">Biz-Trip</a></li>
+                <li><a href="#none"><img src="../../images/m-menu06.svg" alt="e-Ticket">e-Ticket</a></li>
+                <li><a href="#none"><img src="../../images/m-menu08.svg" alt="E-doc">E-doc</a></li>
+                <li><a href="#none"><img src="../../images/m-menu09.svg" alt="Vendor/Customer">Vendor/Customer</a></li>
+                <li><a href="#none"><img src="../../images/m-menu07.svg" alt="Admin">Admin</a></li>
+            </ul>
+            <div class="a-targetbox">
+                <div id="target1" class="a-target active">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">User</a>
+                            <ul class="a-depth3">
+                                <li><a href="../system/IMP-UI-002-01-01-01.html">User Management</a></li>
+                                <li><a href="../system/IMP-UI-002-01-02-01.html">User Log</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Authority</a>
+                            <ul class="a-depth3">
+                                <li><a href="../system/IMP-UI-002-02-01-01.html">Menu Management</a></li>
+                                <li><a href="../system/IMP-UI-002-02-02-01.html">Role Management</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2">
+                            <a href="#none">Code</a>
+                            <ul class="three-depth">
+                                <li><a href="../system/IMP-UI-002-03-02-01.html">Common Code</a></li>
+                                <li><a href="../system/IMP-UI-002-03-02-02.html">Master Group Code</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2"><a href="../system/IMP-UI-002-03-03-01.html">Message</a></li>
+                    </ul>
+                </div>
+                <div id="target2" class="a-target">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">Private Box</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/IMP-UI-003-01-01-01.html">Request for Approval</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-02-01.html">Pending</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-03-01.html">Inbound</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-04-01.html">Outbound</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-05-01.html">Overdue</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-01-06-01.html">Deputy Approval</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Department Box</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/IMP-UI-003-02-01-01.html">Department Pending</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-02-02-01.html">Inbound</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Community</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/IMP-UI-003-03-01-01.html">News</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-03-02-01.html">Info Desk</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-03-03-01.html">Management System</a></li>
+                                <li><a href="../mymenu/IMP-UI-003-03-04-01.html">Legal and Compliance</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">My Profile</a>
+                            <ul class="a-depth3">
+                                <li><a href="../mymenu/IMP-UI-003-04-01-01.html">Profile</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="target3" class="a-target">
+                    <ul class="a-depth2">
+                        <li class="d2"><a href="../order/IMP-UI-004-01-01-01.html">Order Request(PR)</a></li>
+                        <li class="d2"><a href="../order/IMP-UI-004-02-01-01.html">Order Plan(PO)</a></li>
+                    </ul>
+                </div>
+                <div id="target4" class="a-target">
+                    <ul class="a-depth2">
+                        <li class="d2"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
+                        <li class="d2"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
+                        <li class="d2"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                    </ul>
+                </div>
+                <div id="target5" class="a-target">
+                    <ul class="a-depth2">
+                        <li class="d2"><a href="../biztrip/IMP-UI-006-01-01-01.html">BT plan</a></li>
+                        <li class="d2"><a href="../biztrip/IMP-UI-006-02-01-01.html">BT Settlement</a></li>
+                    </ul>
+                </div>
+                <div id="target6" class="a-target">
+                    <ul class="a-depth2">
+                        <li class="d2"><a href="../eticket/IMP-UI-007-01-01-01.html">Dashboard</a></li>
+                        <li class="d2"><a href="../eticket/IMP-UI-007-02-01-01.html">New Ticket</a></li>
+                        <li class="d2"><a href="../eticket/IMP-UI-007-03-01-01.html">Tickets</a></li>
+                    </ul>
+                </div>
+                <div id="target8" class="a-target">
+                    <ul class="a-depth2">
+                        <li><a href="../admin/IMP-UI-008-08-01-01.html">E-doc</a></li>
+                        <li><a href="../admin/IMP-UI-008-08-02-01.html">E-doc based SAP</a></li>
+                    </ul>
+                </div>
+                <div id="target9" class="a-target">
+                    <ul class="a-depth2">
+                        <li><a href="../admin/IMP-UI-008-04-01-01.html">Vender/Customer</a></li>
+                        <li><a href="../admin/IMP-UI-008-04-04-01.html">Vendor/Customer history</a></li>
+                    </ul>
+                </div>
+                <div id="target7" class="a-target">
+                    <ul class="a-depth2">
+                        <li>
+                            <a href="#none">Mater</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/IMP-UI-008-01-02-01.html">Organization Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-04-01.html">Company Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-06-01.html">Group Master(SAP)</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-07-01.html">VAT Code</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-08-01.html">Request Mapping</a></li>
+                                <li><a href="../admin/IMP-UI-008-01-09-01.html">Corp Card Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-03-02-01.html">Delivery Management</a></li>
+                                <li><a href="../admin/IMP-UI-008-05-01-01.html">BT Expense Master</a></li>
+                                <li><a href="../admin/IMP-UI-008-06-01-01.html">Approval Line</a></li>
+                                <li><a href="../admin/IMP-UI-008-11-01-01.html">Master Code</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Account</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/IMP-UI-008-02-01-01.html">G/L Account</a></li>
+                                <li><a href="../admin/IMP-UI-008-02-01-01.html">Monthly Closing Deadline</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Expense booking</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/IMP-UI-008-07-01-01.html">Journalizing List</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none">Report</a>
+                            <ul class="a-depth3">
+                                <li><a href="../admin/IMP-UI-008-01-03-01.html">Organization Management History</a></li>
+                                <li><a href="../admin/IMP-UI-008-09-01-01.html">E-mail History</a></li>
+                                <li><a href="../admin/IMP-UI-008-09-02-01.html">SAP Master I/F History</a></li>
+                                <li><a href="../admin/IMP-UI-008-09-03-01.html">SAP Booking History</a></li>
+                            </ul>
+                        </li>
+                        <li class="d2"><a href="../admin/IMP-UI-008-10-01-01.html">News</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<script src="./js/jquery-3.6.3.min.js"></script>
+	<title>[IMP Project - 작업현황]</title>
+
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 30px;
+			font-family: '맑은 고딕';
+			font-size: 18px;
+			color: #333;
+			line-height: 30px;
+		}
+
+		h1 {
+			margin: 0 0 30px;
+			padding: 0;
+			font-size: 30px;
+			color: #000;
+			text-align: center;
+			letter-spacing: -1px;
+			line-height: 50px;
+			letter-spacing: -1px;
+		}
+
+		table {
+			overflow: hidden;
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 14px;
+		}
+
+		table caption {
+			overflow: hidden;
+			width: 0;
+			height: 0;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			line-height: 0;
+		}
+
+		table tr:nth-child(even) {
+			background-color: #f8f8f8;
+		}
+
+		table th {
+			position: relative;
+			padding: 5px;
+			border-top: 3px solid #333;
+		}
+
+		table th:before {
+			position: absolute;
+			left: -1px;
+			top: 50%;
+			width: 1px;
+			height: 10px;
+			margin-top: -5px;
+			background-color: #ccc;
+			content: '';
+		}
+
+		table td {
+			padding: 5px 15px;
+			border: 1px solid #efefef;
+		}
+
+		table td:first-child {
+			border-left: 0 none;
+		}
+
+		table td:nth-child(7) {
+			font-size: 13px;
+			color: #555;
+			letter-spacing: -1px;
+			line-height: 25px;
+			text-align: center;
+		}
+
+		table td:nth-child(8) {
+			text-align: center;
+		}
+
+		table td:nth-child(9) {
+			text-align: center;
+		}
+
+		table td:nth-child(10) {
+			text-align: center;
+		}
+
+		table td:last-child {
+			border-right: 0 none;
+			font-size: 13px;
+			color: #555;
+			letter-spacing: -1px;
+			line-height: 25px;
+		}
+
+		table a {
+			color: #146DB6;
+		}
+
+		table .blank {
+			height: 15px;
+			padding: 0;
+			border: 0 none;
+			background-color: #ccc;
+			font-size: 0;
+			line-height: 0;
+		}
+
+		.project {
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 30px;
+			padding: 20px 20px 20px 0;
+			border: 1px solid #efefef;
+			background-color: #fcfcfc;
+		}
+
+		.project li {
+			margin-left: 20px;
+		}
+
+		.info {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			margin: 0;
+			padding: 0;
+		}
+
+		.info .option {
+			color: #ccc;
+		}
+
+		.info .option span {
+			text-decoration: line-through;
+		}
+
+		.info .option strong {
+			font-weight: bold;
+			color: #333;
+		}
+
+		.history {
+			padding: 15px 0;
+		}
+
+		.history ul {
+			overflow: hidden;
+			overflow-y: auto;
+			margin: 0 15px;
+			padding: 0;
+			list-style: none;
+		}
+
+		.history li {
+			position: relative;
+			margin-left: 10px;
+			padding-left: 162px;
+			font-size: 14px;
+			color: #666;
+		}
+
+		.history strong {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.history strong:before {
+			position: absolute;
+			left: 142px;
+			top: 50%;
+			width: 1px;
+			height: 10px;
+			margin-top: -4px;
+			background-color: #999;
+			content: '';
+		}
+
+		.add {
+			color: red;
+		}
+
+		.modify {
+			color: orange;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>퍼블리싱 작업현황</h1>
+
+	<div class="project">
+
+		<div class="history">
+			<ul>
+				<li>
+					<strong>총 작업량</strong>
+					<span>142화면 중 142화면 완료(2023-12-18)</span>
+				</li>
+				<li>
+					<strong>카테고리 별 작업률</strong>
+					<span>Login(1/1)
+						Main page(3/3)
+						System(15/15)
+						My menu(36/36)
+						Order(10/10)
+						Expense(12/12)
+						Biz-trip(7/7)
+						E-ticket(4/4)
+						Admin(55/55)</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<table id="ResultTable">
+		<caption>메뉴구조도에 따른 작업현황</caption>
+		<colgroup>
+			<col width="12%">
+			<col width="12%">
+			<col width="12%">
+			<col width="12%">
+			<col width="17%">
+			<col width="20%">
+			<col width="5%">
+			<col width="5%">
+			<col width="5%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">1depth</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">메뉴설명</th>
+				<th scope="col">link</th>
+				<th scope="col">퍼블리싱</th>
+				<th scope="col">반응형</th>
+				<th scope="col">웹표준</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><strong>0. Login</strong></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>로그인페이지</td>
+				<td><a href="IMP-UI-000-00-00-00.html" target="_blank">IMP-UI-000-00-00-00.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>
+					O
+					<br>
+					<a href="https://validator.w3.org/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>1. Main page</strong></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>메인페이지</td>
+				<td><a href="IMP-UI-001-00-00-00.html" target="_blank">IMP-UI-001-00-00-00.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>
+					O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>User Information</td>
+				<td></td>
+				<td>popup</td>
+				<td>직원 사용자 연락처 조회용 화면</td>
+				<td><a href="IMP-UI-001-01-00-00.html" target="_blank">IMP-UI-001-01-00-00.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>
+					O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>Notice Popup</td>
+				<td></td>
+				<td>popup</td>
+				<td>공지사항 팝업</td>
+				<td><a href="IMP-UI-001-02-00-00.html" target="_blank">IMP-UI-001-02-00-00.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>
+					O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<!-- <tr>
+				<td></td>
+				<td>UserUISet</td>
+				<td></td>
+				<td></td>
+				<td>신규) 사용자 별 UI 포맷 구성 화면</td>
+				<td><a href="IMP-UI-001-00-00-00.html" target="_blank">IMP-UI-001-00-00-00.html</a></td>
+				<td>X</td>
+				<td>X</td>
+				<td>
+					X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr> -->
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>샘플 리스트</td>
+				<td><a href="./pages/sample/sampleList.html" target="_blank">sampleList.html</a></td>
+				<td></td>
+				<td></td>
+				<td>
+					
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>샘플 상세</td>
+				<td><a href="./pages/sample/sampleNew.html" target="_blank">sampleNew.html</a></td>
+				<td></td>
+				<td></td>
+				<td>
+					
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>2. System</strong></td>
+				<td>2-1. User</td>
+				<td>User Management</td>
+				<td>list</td>
+				<td>IMP 사용자 관리 리스트 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-01-01-01.html" target="_blank">IMP-UI-002-01-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail/modify</td>
+				<td>IMP 사용자 관리 상세/수정 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-01-01-02.html" target="_blank">IMP-UI-002-01-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>IMP 사용자 관리 추가 화면(Internal User)</td>
+				<td><a href="./pages/system/IMP-UI-002-01-01-03.html" target="_blank">IMP-UI-002-01-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>IMP 사용자 관리 추가 화면(External User)</td>
+				<td><a href="./pages/system/IMP-UI-002-01-01-04.html" target="_blank">IMP-UI-002-01-01-04.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>User log</td>
+				<td>list</td>
+				<td>사용자 접근 로그 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-01-02-01.html" target="_blank">IMP-UI-002-01-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>2-2. Authority</td>
+				<td>Menu Management</td>
+				<td>view</td>
+				<td>사용자별 조회 메뉴 권한 설정 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-02-01-01.html" target="_blank">IMP-UI-002-02-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>메뉴 정보 추가 팝업</td>
+				<td><a href="./pages/system/IMP-UI-002-02-01-02.html" target="_blank">IMP-UI-002-02-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>메뉴 정보 수정 팝업<br>
+					(+Delete Confirm 모달창)
+				</td>
+				<td><a href="./pages/system/IMP-UI-002-02-01-03.html" target="_blank">IMP-UI-002-02-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Role Management</td>
+				<td>view</td>
+				<td>사용자별 메뉴 조회 권한 설정 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-02-02-01.html" target="_blank">IMP-UI-002-02-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>권한 정보 수정 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-02-02-02.html" target="_blank">IMP-UI-002-02-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>권한 정보 추가 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-02-02-03.html" target="_blank">IMP-UI-002-02-02-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>2-3. Code</td>
+				<td>Common Code</td>
+				<td>view</td>
+				<td>공통코드 관리 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-03-02-01.html" target="_blank">IMP-UI-002-03-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Master Group Code</td>
+				<td>view</td>
+				<td>공통코드 관리 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-03-02-02.html" target="_blank">IMP-UI-002-03-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>2-4. message</td>
+				<td></td>
+				<td>view</td>
+				<td>시스템 컬럼명, 경고메시지 등을 관리하는 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-03-03-01.html" target="_blank">IMP-UI-002-03-03-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>ㅍ
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>시스템 컬럼명, 경고메시지 추가 화면</td>
+				<td><a href="./pages/system/IMP-UI-002-03-03-02.html" target="_blank">IMP-UI-002-03-03-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>3. My menu</strong></td>
+				<td>3-1. Private Box</td>
+				<td>Request for Approval</td>
+				<td>view</td>
+				<td>cost center, SAP code, 일반 요청 등을 신청하는 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-01-01.html" target="_blank">IMP-UI-003-01-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>Approval Line Management 결재라인 설정 팝업</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-01-02.html" target="_blank">IMP-UI-003-01-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Overdue Tasks(Pending)</td>
+				<td>list</td>
+				<td>Pending - 개인에게 결재 요청 온 대기 문서 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-02-01.html" target="_blank">IMP-UI-003-01-02-01.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Pending - 개인에게 결재 요청 온 대기 문서 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-02-02.html" target="_blank">IMP-UI-003-01-02-02.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>Pending - 개인에게 결재 요청 온 대기 문서 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-02-03.html" target="_blank">IMP-UI-003-01-02-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>New Tasks(Inbound)</td>
+				<td>list</td>
+				<td>Private Inbound - 개인이 결재한 문서 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-03-01.html" target="_blank">IMP-UI-003-01-03-01.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Private Inbound - 개인이 결재한 문서 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-03-02.html" target="_blank">IMP-UI-003-01-03-02.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Active Tasks(Outbound)</td>
+				<td>list</td>
+				<td>Private Outbound - 개인이 결재를 요청한 문서 화면<br>
+					(+Settlement Repetition 모달창)
+				</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-04-01.html" target="_blank">IMP-UI-003-01-04-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Private Outbound - 개인이 결재를 요청한 문서 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-04-02.html" target="_blank">IMP-UI-003-01-04-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>10.Ready Tasks(Draft)</td>
+				<td>list</td>
+				<td>Draft - 승인 반려, 초안 문서를 관리하는 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-05-01.html" target="_blank">IMP-UI-003-01-05-01.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>E-doc</td>
+				<td>list</td>
+				<td>E-doc list screen - 개인이 증빙해야할 부킹완료된 문서</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-07-01.html" target="_blank">IMP-UI-003-01-07-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>E-doc detail screen - 증빙문서를 첨부하여 결재요청하는 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-07-02.html" target="_blank">IMP-UI-003-01-07-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Deputy approval</td>
+				<td>list</td>
+				<td>Deputy Approval - (휴가 등의 사유로)대무자 관리 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-06-01.html" target="_blank">IMP-UI-003-01-06-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Deputy Approval - (휴가 등의 사유로)대무자 관리 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-06-02.html" target="_blank">IMP-UI-003-01-06-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>Deputy Approval - (휴가 등의 사유로)대무자 관리 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-01-06-03.html" target="_blank">IMP-UI-003-01-06-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>3-2. Department Box</td>
+				<td>Overdue Tasks(Pending)</td>
+				<td>list</td>
+				<td>Overdue Tasks 리스트 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-02-01-01.html" target="_blank">IMP-UI-003-02-01-01.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Overdue Tasks 상세 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-02-01-02.html" target="_blank">IMP-UI-003-02-01-02.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>New Tasks(Inbound)</td>
+				<td>list</td>
+				<td>New Tasks 리스트 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-02-02-01.html" target="_blank">IMP-UI-003-02-02-01.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>New Tasks 상세 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-02-02-02.html" target="_blank">IMP-UI-003-02-02-02.html</a></td>
+				<td>O(11/22)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>3-3. Community</td>
+				<td>20.News</td>
+				<td>list</td>
+				<td>News 리스트 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-01-01.html" target="_blank">IMP-UI-003-03-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>News 상세 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-01-02.html" target="_blank">IMP-UI-003-03-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Info Desk</td>
+				<td>list</td>
+				<td>Info Desk 리스트 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-02-01.html" target="_blank">IMP-UI-003-03-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Info Desk 상세 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-02-02.html" target="_blank">IMP-UI-003-03-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>Info Desk 수정 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-02-03.html" target="_blank">IMP-UI-003-03-02-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>Info Desk 등록 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-02-04.html" target="_blank">IMP-UI-003-03-02-04.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Management System</td>
+				<td>list</td>
+				<td>Management System 리스트 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-03-01.html" target="_blank">IMP-UI-003-03-03-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Management System 상세 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-03-02.html" target="_blank">IMP-UI-003-03-03-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>Management System 수정 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-03-03.html" target="_blank">IMP-UI-003-03-03-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>Management System 등록 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-03-04.html" target="_blank">IMP-UI-003-03-03-04.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>30.Legal and Compliance</td>
+				<td>list</td>
+				<td>Legal and Compliance 리스트 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-04-01.html" target="_blank">IMP-UI-003-03-04-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Legal and Compliance 상세 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-04-02.html" target="_blank">IMP-UI-003-03-04-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>Legal and Compliance 수정 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-04-03.html" target="_blank">IMP-UI-003-03-04-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>Legal and Compliance 등록 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-03-04-04.html" target="_blank">IMP-UI-003-03-04-04.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>User Information</td>
+				<td>view</td>
+				<td>User Infomation 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-04-01-01.html" target="_blank">IMP-UI-003-04-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>User Infomation 수정 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-04-01-02.html" target="_blank">IMP-UI-003-04-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>list(history)</td>
+				<td>User Infomation History 화면</td>
+				<td><a href="./pages/mymenu/IMP-UI-003-04-02-01.html" target="_blank">IMP-UI-003-04-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>4. Order</strong></td>
+				<td>4-1. Order Request(PR)</td>
+				<td></td>
+				<td>list</td>
+				<td>일반 사용자 구매 요청 리스트 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-01-01-01.html" target="_blank">IMP-UI-004-01-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>Detail</td>
+				<td>일반 사용자 구매 요청 상세 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-01-01-02.html" target="_blank">IMP-UI-004-01-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>Edit</td>
+				<td>일반 사용자 구매 요청 수정 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-01-01-03.html" target="_blank">IMP-UI-004-01-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>일반 사용자 구매 요청 생성 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-01-02-01.html" target="_blank">IMP-UI-004-01-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup - Prev Purchase</td>
+				<td>일반 사용자 Prev Purchase 팝업 - Request for Purchase List</td>
+				<td><a href="./pages/order/IMP-UI-004-01-02-02.html" target="_blank">IMP-UI-004-01-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>4-2. Order Plan(PO)</td>
+				<td></td>
+				<td>list</td>
+				<td>GA/관리자 구매 요청 리스트 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-02-01-01.html" target="_blank">IMP-UI-004-02-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>GA/관리자 구매 요청 상세 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-02-01-02.html" target="_blank">IMP-UI-004-02-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>GA/관리자 구매 요청 수정 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-02-01-03.html" target="_blank">IMP-UI-004-02-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>GA/관리자 구매 요청 생성 화면</td>
+				<td><a href="./pages/order/IMP-UI-004-02-02-01.html" target="_blank">IMP-UI-004-02-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup - Select Purchase Request</td>
+				<td>GA/관리자 Select Purchase Request 팝업</td>
+				<td><a href="./pages/order/IMP-UI-004-02-02-02.html" target="_blank">IMP-UI-004-02-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>5. Expense</strong></td>
+				<td>5-1. Expense Plan(ER)</td>
+				<td>Expense plan list</td>
+				<td>list</td>
+				<td>비용 계획 요청 리스트 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-01-01-01.html" target="_blank">IMP-UI-005-01-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>Detail</td>
+				<td>비용 계획 요청 상세 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-01-01-02.html" target="_blank">IMP-UI-005-01-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>비용 계획 요청 수정 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-01-01-03.html" target="_blank">IMP-UI-005-01-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>New plan</td>
+				<td>view</td>
+				<td>비용 계획 요청 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-01-02-01.html" target="_blank">IMP-UI-005-01-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup - Previous Expense List</td>
+				<td>비용 계획 요청 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-01-02-02.html" target="_blank">IMP-UI-005-01-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>5-2. Expense settlement(EO)</td>
+				<td>Settlement list</td>
+				<td>list</td>
+				<td>비용 정산 요청 리스트 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-02-01-01.html" target="_blank">IMP-UI-005-02-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>비용 정산 요청 상세 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-02-01-02.html" target="_blank">IMP-UI-005-02-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>비용 정산 요청 수정 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-02-01-03.html" target="_blank">IMP-UI-005-02-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>New Settlement</td>
+				<td>view</td>
+				<td>비용 정산 요청 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-02-02-01.html" target="_blank">IMP-UI-005-02-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>ER/PO/GR List</td>
+				<td>비용 정산 요청 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-02-02-02.html" target="_blank">IMP-UI-005-02-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>5-3. Corp.card Settlement</td>
+				<td></td>
+				<td>list</td>
+				<td>법인카드 정산 요청 리스트 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-02-04-01.html" target="_blank">IMP-UI-005-02-04-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>법인카드 정산 요청 리스트 화면</td>
+				<td><a href="./pages/expense/IMP-UI-005-02-04-02.html" target="_blank">IMP-UI-005-02-04-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>6. Biz-Trip</strong></td>
+				<td>6-1. BT plan</td>
+				<td>BT Plan</td>
+				<td>list</td>
+				<td>출장 계획 요청 리스트 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-01-01-01.html" target="_blank">IMP-UI-006-01-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>출장 계획 요청 상세 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-01-01-02.html" target="_blank">IMP-UI-006-01-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>출장 계획 요청 수정 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-01-01-03.html" target="_blank">IMP-UI-006-01-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>출장 계획 요청 상세 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-01-02-01.html" target="_blank">IMP-UI-006-01-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>6-2. BT Settlement</td>
+				<td>BT Settlement</td>
+				<td>list</td>
+				<td>비용 정산 요청 리스트 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-02-01-01.html" target="_blank">IMP-UI-006-02-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>비용 정산 요청 상세 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-02-01-02.html" target="_blank">IMP-UI-006-02-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>view</td>
+				<td>비용 정산 요청 view 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-02-01-03.html" target="_blank">IMP-UI-006-02-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>비용 정산 요청 edit 화면</td>
+				<td><a href="./pages/biztrip/IMP-UI-006-02-01-04.html" target="_blank">IMP-UI-006-02-01-04.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>7. E-Ticket</strong></td>
+				<td>7-1. Dashboard</td>
+				<td></td>
+				<td></td>
+				<td>E-ticket 사용 현황 관리 화면</td>
+				<td><a href="./pages/eticket/IMP-UI-007-01-01-01.html" target="_blank">IMP-UI-007-01-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>New Ticket</td>
+				<td>view</td>
+				<td>E-ticket 사용 현황 관리 화면</td>
+				<td><a href="./pages/eticket/IMP-UI-007-02-01-01.html" target="_blank">IMP-UI-007-02-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Tickets</td>
+				<td>list</td>
+				<td>E-ticket 사용 현황 관리 리스트 화면</td>
+				<td><a href="./pages/eticket/IMP-UI-007-03-01-01.html" target="_blank">IMP-UI-007-03-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>E-ticket 사용 현황 관리 리스트 화면</td>
+				<td><a href="./pages/eticket/IMP-UI-007-03-01-02.html" target="_blank">IMP-UI-007-03-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="10" class="blank"></td>
+			</tr>
+
+			<tr>
+				<td><strong>8. Admin</strong></td>
+				<td>8-1. Mater</td>
+				<td>Organization Management</td>
+				<td>list</td>
+				<td>부서 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-02-01.html" target="_blank">IMP-UI-008-01-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>Organization Management 수정 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-02-02.html" target="_blank">IMP-UI-008-01-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>Organization Management 생성 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-02-03.html" target="_blank">IMP-UI-008-01-02-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			
+			<!-- <tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Organization Manage History</td>
+				<td>list</td>
+				<td>Organization Manage History 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-03-01.html" target="_blank">IMP-UI-008-01-03-01.html</a></td>
+				<td>O(12/6)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr> -->
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Company Management</td>
+				<td>list</td>
+				<td>Company Management 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-04-01.html" target="_blank">IMP-UI-008-01-04-01.html</a></td>
+				<td>O(12/6)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>Company Management 수정 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-04-02.html" target="_blank">IMP-UI-008-01-04-02.html</a></td>
+				<td>O(12/6)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>Company Management 등록 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-04-03.html" target="_blank">IMP-UI-008-01-04-03.html</a></td>
+				<td>O(12/6)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Group Master(SAP)</td>
+				<td>list</td>
+				<td>Group Master(SAP) 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-06-01.html" target="_blank">IMP-UI-008-01-06-01.html</a></td>
+				<td>O(12/8)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>VAT Code</td>
+				<td>list</td>
+				<td>VAT Code 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-07-01.html" target="_blank">IMP-UI-008-01-07-01.html</a></td>
+				<td>O(12/8)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>VAT Code 상세 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-07-02.html" target="_blank">IMP-UI-008-01-07-02.html</a></td>
+				<td>O(12/8)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td>10</td>
+				<td></td>
+				<td>add</td>
+				<td>VAT Code 신규 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-07-03.html" target="_blank">IMP-UI-008-01-07-03.html</a></td>
+				<td>O(12/8)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Request Mapping</td>
+				<td>list</td>
+				<td>Request Mapping 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-08-01.html" target="_blank">IMP-UI-008-01-08-01.html</a></td>
+				<td>O(12/8)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Request Mapping 상세 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-08-02.html" target="_blank">IMP-UI-008-01-08-02.html</a></td>
+				<td>O(12/8)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>Request Mapping 신규 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-08-03.html" target="_blank">IMP-UI-008-01-08-03.html</a></td>
+				<td>O(12/8)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Corporation Card</td>
+				<td>list</td>
+				<td>Corporation Card 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-09-01.html" target="_blank">IMP-UI-008-01-09-01.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Corporation Card 상세 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-09-02.html" target="_blank">IMP-UI-008-01-09-02.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>Corporation Card 수정 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-09-03.html" target="_blank">IMP-UI-008-01-09-03.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>Corporation Card 신규 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-09-04.html" target="_blank">IMP-UI-008-01-09-04.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Delivery</td>
+				<td>list</td>
+				<td>배송지 관리 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-03-02-01.html" target="_blank">IMP-UI-008-03-02-01.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>배송지 관리 수정 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-03-02-02.html" target="_blank">IMP-UI-008-03-02-02.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>20</td>
+				<td></td>
+				<td>add</td>
+				<td>배송지 관리 추가 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-03-02-03.html" target="_blank">IMP-UI-008-03-02-03.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Vendor/ Customer</td>
+				<td>list</td>
+				<td>vendor/customer 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-04-01-01.html" target="_blank">IMP-UI-008-04-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>vendor/customer 등록 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-04-01-02.html" target="_blank">IMP-UI-008-04-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>vendor/customer 상세 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-04-01-03.html" target="_blank">IMP-UI-008-04-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>vendor/customer 수정 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-04-01-04.html" target="_blank">IMP-UI-008-04-01-04.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>popup</td>
+				<td>Vendor/customer 불러오기 팝업 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-04-01-05.html" target="_blank">IMP-UI-008-04-01-05.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>BT Expense Master</td>
+				<td>list</td>
+				<td>출장 일비 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-05-01-01.html" target="_blank">IMP-UI-008-05-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail/edit</td>
+				<td>출장 일비 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-05-01-02.html" target="_blank">IMP-UI-008-05-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>출장 일비 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-05-01-03.html" target="_blank">IMP-UI-008-05-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Approval Line</td>
+				<td>list</td>
+				<td>RFA 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-06-01-01.html" target="_blank">IMP-UI-008-06-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>30</td>
+				<td></td>
+				<td>detail</td>
+				<td>RFA 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-06-01-02.html" target="_blank">IMP-UI-008-06-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>RFA 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-06-01-03.html" target="_blank">IMP-UI-008-06-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>8-2. Account</td>
+				<td>G/L Account</td>
+				<td>list</td>
+				<td>G/L Account 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-02-01-01.html" target="_blank">IMP-UI-008-02-01-01.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>G/L Account 상세 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-02-01-02.html" target="_blank">IMP-UI-008-02-01-02.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>G/L Account 신규 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-02-01-03.html" target="_blank">IMP-UI-008-02-01-03.html</a></td>
+				<td>O(12/12)</td>
+				<td>O</td>
+				<td>X
+					<br>
+					<a href="https://validator.w3.org/nu/"
+					target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Monthly Closing Deadline</td>
+				<td>list</td>
+				<td>월 마감 관리 화면<br>
+					(+Closing Period Confirm 모달창)
+				</td>
+				<td><a href="./pages/admin/IMP-UI-008-02-02-01.html" target="_blank">IMP-UI-008-02-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>8-3. Expense booking</td>
+				<td>Journal list</td>
+				<td>list/detail</td>
+				<td>매입/매출 정산 리스트 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-07-01-01.html" target="_blank">IMP-UI-008-07-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add(Incoming)</td>
+				<td>매입 정산 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-07-01-02.html" target="_blank">IMP-UI-008-07-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add(Outgoing)</td>
+				<td>매출 정산 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-07-01-03.html" target="_blank">IMP-UI-008-07-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Journalizing details</td>
+				<td>popup</td>
+				<td>SAP 데이터 상세 조회 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-07-04-01.html" target="_blank">IMP-UI-008-07-04-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>40 8-4. E-doc</td>
+				<td>E-doc list</td>
+				<td>list</td>
+				<td>증빙단계 완료된 기안 목록</td>
+				<td><a href="./pages/admin/IMP-UI-008-08-01-01.html" target="_blank">IMP-UI-008-08-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>증빙단계 완료된 기안 상세</td>
+				<td><a href="./pages/admin/IMP-UI-008-08-01-02.html" target="_blank">IMP-UI-008-08-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>E-doc based SAP</td>
+				<td>list</td>
+				<td>SAP Reverse 문서 목록</td>
+				<td><a href="./pages/admin/IMP-UI-008-08-02-01.html" target="_blank">IMP-UI-008-08-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>SAP Reverse 문서 상세</td>
+				<td><a href="./pages/admin/IMP-UI-008-08-02-02.html" target="_blank">IMP-UI-008-08-02-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>detail</td>
+				<td>Edit  E-doc based SAP - Revers된 문서 결재요청 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-08-02-03.html" target="_blank">IMP-UI-008-08-02-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>8-5. Report</td>
+				<td>Organization Manage History</td>
+				<td>list</td>
+				<td>부서 관리 히스토리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-01-03-01.html" target="_blank">IMP-UI-008-01-03-01.html</a></td>
+				<td>O(12/6)</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>Vendor/Customer History</td>
+				<td>list</td>
+				<td>vendor/customer 이력 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-04-04-01.html" target="_blank">IMP-UI-008-04-04-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>E-mail History</td>
+				<td>list</td>
+				<td>이메일 전송 여부 히스토리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-09-01-01.html" target="_blank">IMP-UI-008-09-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>SAP Master I/F History</td>
+				<td>list</td>
+				<td>SAP - IMP 간 인터페이스 내역 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-09-02-01.html" target="_blank">IMP-UI-008-09-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td>SAP Booking History</td>
+				<td>list</td>
+				<td>SAP booking 히스토리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-09-03-01.html" target="_blank">IMP-UI-008-09-03-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>50 8-6. News</td>
+				<td>News</td>
+				<td>list</td>
+				<td>공지 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-10-01-01.html" target="_blank">IMP-UI-008-10-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>edit</td>
+				<td>공지 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-10-01-02.html" target="_blank">IMP-UI-008-10-01-02.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>add</td>
+				<td>공지 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-10-01-03.html" target="_blank">IMP-UI-008-10-01-03.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td>Edit Authority</td>
+				<td>공지 권한 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-10-02-01.html" target="_blank">IMP-UI-008-10-02-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td><strong></strong></td>
+				<td>54 8-7. Master Code</td>
+				<td></td>
+				<td>list</td>
+				<td>공지 권한 관리 화면</td>
+				<td><a href="./pages/admin/IMP-UI-008-11-01-01.html" target="_blank">IMP-UI-008-11-01-01.html</a></td>
+				<td>O</td>
+				<td>O</td>
+				<td>O
+					<br>
+					<a href="https://validator.w3.org/nu/"
+						target="_blank">결과보기</a>
+				</td>
+			</tr>
+
+			<tr id="resultRow">
+				<td><strong></strong></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td id="resultCell"></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		// jQuery를 사용하여 특정 열에서 "O"의 개수를 세는 함수
+		function countOInColumn(columnIndex) {
+		  var count = 0;
+		  $('#ResultTable tbody tr').each(function () {
+			var cellText = $(this).find('td:eq(' + columnIndex + ')').text();
+			if (cellText.trim() === 'O') {
+			  count++;
+			}
+		  });
+		  return count;
+		}
+	  
+		// 결과를 각 열에 표시
+		function displayResult() {
+		  $('#ResultTable tbody tr:last td').each(function (index) {
+			var columnIndex = index;
+			var result = countOInColumn(columnIndex);
+			$(this).text(result);
+		  });
+		}
+	  
+		// 예제: 결과 표시
+		displayResult();
+	  </script>
+</body>
+
+</html>

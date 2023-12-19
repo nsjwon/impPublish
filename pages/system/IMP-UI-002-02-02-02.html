@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <title>Modify Role Information</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="popup-content-wrap">
+            <div class="edit-title">
+                <h5 class="flex-al">Modify Role Information</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
+                </div>
+            </div>
+            <section class="popup-contents">
+                <div class="edit-wrap">
+                    <div class="sub-title">
+                        <h6>Role Information</h6>
+                    </div>
+                    <fieldset class="form">
+                        <label>Corporation
+                            <input type="text" name="mid" value="GEU" readonly>
+                        </label>
+                        <div class="form-b">
+                            <label>Role ID
+                                <input type="text" name="text" value="ADMIN_VIENNA">
+                            </label>
+                            <button class="btn-navy" id="bt-dupcheck">DUP.CHECK</button>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Description
+                            <input type="text" name="mid" value="Admin user in Vienna">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form-c tem2">
+                        <p class="field-title">Biz Area(Please note that changing the settings may affect other regions)</p>
+                        <div class="c-labelbox mt10">
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>Eschborn(1200)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>London(1210)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>Koper(1220)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck" checked>
+                                <span>Vienna(1230)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>Amsterdam(1240)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>Hamburg PCC(1250)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>Hamburg PCC(1260)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>Bremerhaven(1270)</span>
+                            </label>
+                            <label class="c-label">
+                                <input type="checkbox" class="m-chck" name="chck">
+                                <span>Barcelona(1280)</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="sub-title mt40">
+                        <h6>User Information</h6>
+                    </div>
+                    <div class="edit-half-01">
+                        <div class="pop-list-02 pop-listbox">
+                            <div class="e-list flex-col">
+                                <div class="e-sub-title">
+                                    <h5 class="pb10">Organization</h5>
+                                </div>
+                                <div class="e-list-inner">
+                                    <table class="orgz-table">
+                                        <caption class="hide">리스트</caption>
+                                        <colgroup>
+                                            <col style="width: 100%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-1">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>Glovis Europe GmbH</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-2">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>GEU Vienna Branch</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-2">
+                                                    <div class="opener">
+                                                        <button class="btn-folder open"></button>
+                                                        <span>FVL Div. 1</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-3">
+                                                    <div class="opener">
+                                                        <button class="btn-folder open"></button>
+                                                        <span>SCM Dept.</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-4">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>HMMC Team</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-4">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>KaSK Team</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="orgz-tree orgz-tree-4">
+                                                    <div class="opener">
+                                                        <button class="btn-folder"></button>
+                                                        <span>Short Sea Team</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="e-list flex-col">
+                                <div class="e-list-btnbox">
+                                    <select name="word">
+                                        <option value="keyword">keyword</option>
+                                    </select>
+                                    <input type="text" placeholder="Enter search term">
+                                    <button class="btn-search" id="btn-search">Search</button>
+                                </div>
+                                <div class="e-list-inner">
+                                    <table class="result_table noselect">
+                                        <caption class="hide">리스트</caption>
+                                        <colgroup>
+                                            <col style="width: 8%;">
+                                            <col style="width: 20%;">
+                                            <col style="width: 36%;">
+                                            <col style="width: 36%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Dept</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Verena Jauch</td>
+                                                <td>Manager</td>
+                                                <td>PM Team</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="apl-btn-area">
+                            <a href="#none" class="btn-addline" id="btn-addline">Add</a>
+                            <a href="#none" class="btn-removeline" id="btn-removeline">Remove</a>
+                        </div>
+                        <div class="pop-list-03">
+                            <div class="pop-listbox">
+                                <div class="e-list flex-col">
+                                    <div class="e-sub-title">
+                                    </div>
+                                    <div class="e-list-inner">
+                                        <table class="result_table noselect">
+                                            <caption class="hide">리스트</caption>
+                                            <colgroup>
+                                                <col style="width: 10%;">
+                                                <col style="width: 30%;">
+                                                <col style="width: 30%;">
+                                                <col style="width: 30%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>-</th>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Dept</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox" class="chck"></td>
+                                                    <td>Verena Jauch</td>
+                                                    <td>Manager</td>
+                                                    <td>PM Team</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="l-btnwrap big-button mt40 mb40">
+                        <button id="btn-save">
+                            SAVE
+                        </button>
+                        <button class="btn-red" id="bt-delete">DELETE</button>
+                        <a id="btn-close" href="#none" onClick='self.close()'>
+                            CLOSE
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

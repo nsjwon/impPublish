@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <title>Importing Vendor/Customer</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="popup-content-wrap">
+            <div class="edit-title">
+                <h5>Importing Vendor/Customer</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
+                </div>
+            </div>
+            <section class="popup-contents">
+                <div class="pop-searchbar">
+                    <div class="l-showhow">
+                        <span>Show</span>
+                        <select name="show">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <div class="srch-item">
+                        <div class="dateform">
+                            <div class="date">
+                                <label for="beginDt">
+                                    <input type="date" name="beginDt" id="beginDt">
+                                </label>
+                                <span>~</span>
+                                <label for="endDt">
+                                    <input type="date" name="endDt" id="endDt">
+                                </label>
+                            </div>
+                        </div>
+                        <label>
+                            <select name="Keyword" id="Keyword">
+                                <option value="Keyword">Keyword</option>
+                                <option value="BP.No">BP.No</option>
+                                <option value="requestor">Requestor</option>
+                                <option value="Title">Title</option>
+                            </select>
+                        </label>
+                        <div class="srchform">
+                            <input type="text" placeholder="Enter search term" onfocus="this.placeholder=''" onblur="this.placeholder='Enter search term'">
+                        </div>
+                        <div class="l-btnwrap">
+                            <button class="btn-blue">SEARCH</button>
+                            <button id="btn-add">
+                                ADD
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-wrap">
+                    <div class="result_area">
+                        <table class="result_table">
+                            <caption class="hide">List</caption>
+                            <colgroup>
+                                <col style="width: 5%;">
+                                <col style="width: 80%;">
+                                <col style="width: 15%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th><input type="radio" name="selcell" id="selcell" disabled></th>
+                                    <th>Vendor/Customer Name<button class="btn-sorter"></button></th>
+                                    <th>Date<button class="btn-sorter"></button></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell1"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell2"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell3"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell4"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell5"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell6"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell7"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell8"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell9"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td><input type="radio" name="selcell" id="selcell10"></td>
+                                    <td>Andreas Christ</td>
+                                    <td>09-08-2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page-wrap">
+                        <div></div>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#none" class="btn-page first-page"></a>
+                                <a href="#none" class="btn-page prev-page"></a>
+                            </li>
+                            <li>
+                                <a href="#none" class="btn-page page-num selected">1</a>
+                                <a href="#none" class="btn-page page-num">2</a>
+                                <a href="#none" class="btn-page page-num">3</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="btn-page next-page"></a>
+                                <a href="#none" class="btn-page last-page"></a>
+                            </li>
+                        </ul>
+                        <div class="result-count">
+                            <span>Total <strong>112</strong>&nbsp; <span class="txtcol6">|</span> &nbsp;Page <strong>1/4</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="l-btnwrap big-button mt40">
+                    <a id="btn-close" href="#none" onClick='self.close()'>
+                        CLOSE
+                    </a>
+                </div> -->
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

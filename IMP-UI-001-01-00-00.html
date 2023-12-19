@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/plugins/slick.css">
+    <link rel="stylesheet" href="css/plugins/slick-theme.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/slick.min.js"></script>
+    <title>User Information List</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="popup-content-wrap">
+            <div class="edit-title">
+                <h5>User Information List</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
+                </div>
+            </div>
+            <section class="popup-contents">
+                <p class="mt20 fs_14">Click the 'SEARCH' button without keywords to see all of the employee's contact lists.</p>
+                <div class="pop-searchbar">
+                    <div class="l-showhow">
+                        <span>Show</span>
+                        <select name="show">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <div class="srch-item">
+                        <label>
+                            <select name="Keyword" id="Keyword">
+                                <option value="Keyword">Keyword</option>
+                                <option value="BP.No">BP.No</option>
+                                <option value="requestor">Requestor</option>
+                                <option value="Title">Title</option>
+                            </select>
+                        </label>
+                        <div class="srchform">
+                            <input type="text" placeholder="Enter search term" onfocus="this.placeholder=''" onblur="this.placeholder='Enter search term'">
+                        </div>
+                        <div class="l-btnwrap">
+                            <button class="btn-blue">SEARCH</button>
+                            <button id="btn-excel"><img src="./images/img_excel.png" alt="엑셀">EXCEL</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-wrap">
+                    <div class="result_area">
+                        <table class="result_table">
+                            <caption class="hide">List</caption>
+                            <colgroup>
+                                <col style="width: 10%;">
+                                <col style="width: 12%;">
+                                <col style="width: 14%;">
+                                <col style="width: 10%;">
+                                <col style="width: 14%;">
+                                <col style="width: 14%;">
+                                <col style="width: 14%;">
+                                <col style="width: 12%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Emp.No<button class="btn-sorter"></button></th>
+                                    <th>User name<button class="btn-sorter"></button></th>
+                                    <th>Email</th>
+                                    <th>Department</th>
+                                    <th>Telephone number</th>
+                                    <th>Cellular phone number</th>
+                                    <th>Fax number</th>
+                                    <th>Business Area</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Andreas Christ</td>
+                                    <td>andreas@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                                <tr class="listrow">
+                                    <td>DE00257</td>
+                                    <td>Jinsheng Bai</td>
+                                    <td>jinsheng.bai@glovis.eu</td>
+                                    <td>Ocean Team</td>
+                                    <td>+49 (0)40819719943</td>
+                                    <td>+49 (0)1729630985</td>
+                                    <td>+49 (0)40819719959</td>
+                                    <td>Hamburg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page-wrap">
+                        <div></div>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#none" class="btn-page first-page"></a>
+                                <a href="#none" class="btn-page prev-page"></a>
+                            </li>
+                            <li>
+                                <a href="#none" class="btn-page page-num selected">1</a>
+                                <a href="#none" class="btn-page page-num">2</a>
+                                <a href="#none" class="btn-page page-num">3</a>
+                            </li>
+                            <li>
+                                <a href="#none" class="btn-page next-page"></a>
+                                <a href="#none" class="btn-page last-page"></a>
+                            </li>
+                        </ul>
+                        <div class="result-count">
+                            <span>Total <strong>112</strong>&nbsp; <span class="txtcol6">|</span> &nbsp;Page <strong>1/4</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="l-btnwrap big-button mt40">
+                    <a id="btn-close" href="#none" onClick='self.close()'>
+                        CLOSE
+                    </a>
+                </div> -->
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

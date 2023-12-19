@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/mainStyle.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.3.min.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/slick.min.js"></script>
+    <title>Modify Menu Information</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="popup-content-wrap">
+            <div class="edit-title">
+                <h5 class="flex-al">Modify Menu Information</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
+                </div>
+            </div>
+            <section class="popup-edit">
+                <div class="edit-wrap">
+                    <fieldset class="form">
+                        <label>Menu ID
+                            <input type="text" name="mid" value="SYMN_11">
+                        </label>
+                        <label>Menu Name
+                            <input type="text" name="mn" value="User Management">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Upper Menu
+                            <select name="um">
+                                <option value="Root">Root</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Menu Url Info
+                            <input type="text" name="mui" value="/symn/userManagement.view">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Tab Menu ID
+                            <input type="text" name="Date" value="110001" readonly>
+                        </label>
+                        <label>Tab Menu Name
+                            <input type="text" name="Date" value="System User">
+                        </label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Menu Sort
+                            <input type="text" name="Date" value="112" readonly>
+                        </label>
+                        <label>Use Y/N
+                            <input type="text" name="Date" value="Y">
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="l-btnwrap big-button mt40">
+                    <button id="btn-save">
+                        SAVE
+                    </button>
+                    <button id="bt-delete" class="btn-red modal-button" data-target="#modal2213">
+                        DELETE
+                    </button>
+                    <a id="btn-close" href="#none" onClick='self.close()'>
+                        CLOSE
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- 모달:s -->
+    <div class="modal-panel">
+        <div class="modal-bg"></div>
+        <div id="modal2213" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Delete Menu</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-message">
+                        <p>Do you want to Delete the Menu?</p>
+                    </div>
+                </div>
+                <div class="modal-btnbox">
+                    <a class="modal-btn close" href="#none" id="modal-close">CANCEL</a>
+                    <a class="modal-btn del" href="#none">DELETE</a>
+                    <!-- <a class="modal-btn save" href="#none">OK</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 모달:e -->
+
+</body>
+</html>

@@ -19,19 +19,6 @@
             // 새 창을 여는 코드
             var popupWindow = window.open('IMP-UI-004-01-02-02.html', '_blank', 'width=1360, height=940');
         }
-
-        $(document).ready(function() {
-            const Editor = toastui.Editor;
-    
-            const editor = new Editor({
-                    el: document.querySelector('#editor'),
-                    height: '200px',
-                    initialEditType: 'markdown',
-                    previewStyle: 'vertical'
-                });
-    
-            editor.getMarkdown();
-        });
     </script>
 </head>
 <body>
@@ -122,7 +109,7 @@
                     <ul class="two-depth">
                         <li class="d2 one-menu"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
                         <li class="d2 one-menu"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
-                        <li class="d2 one-menu"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                        <li class="d2 one-menu"><a href="../expense/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
                     </ul>
                 </li>
                 <li class="d1">
@@ -381,197 +368,196 @@
                             <input type="text" name="text" value="Frankfurter Str. 60-68, 65760 Eschborn, Germany" readonly>
                         </label>
                     </fieldset>
-
-                    <div class="edit-sub-wrap mt20">
-                        <div class="e-title">
-                            <h5>Item</h5>
-                            <div class="l-btnwrap">
-                                <button class="btn-blue" onclick="openNewPopup()">
-                                    Prev. Expense
-                                </button>
-                                <button id="btn-add">
-                                    ADD
-                                </button>
+                </div>
+                <div class="edit-sub-wrap">
+                    <div class="e-title">
+                        <h5>Item</h5>
+                        <div class="l-btnwrap">
+                            <button class="btn-blue" onclick="openNewPopup()">
+                                Prev. Expense
+                            </button>
+                            <button id="btn-add">
+                                ADD
+                            </button>
+                        </div>
+                    </div>
+                    <div class="result_area noscroll">
+                        <table class="result_table noselect">
+                            <caption class="hide">리스트</caption>
+                            <colgroup>
+                                <col style="width: 5%;">
+                                <col style="width: 14%;">
+                                <col style="width: 8%;">
+                                <col style="width: 8%;">
+                                <col style="width: 8%;">
+                                <col style="width: 5%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 10%; min-width: 140px;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Classification</th>
+                                    <th>Description</th>
+                                    <th>vendor</th>
+                                    <th>Type</th>
+                                    <th>Qty</th>
+                                    <th>Unit Price</th>
+                                    <th>Contry</th>
+                                    <th>Tax</th>
+                                    <th>Input(%)</th>
+                                    <th>Tax Amount</th>
+                                    <th>Gross Total</th>
+                                    <th>EDIT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="input-type">
+                                    <td>1</td>
+                                    <td>
+                                        <div class="drop-key">
+                                            <a href="#none">Office supplies expense</a>
+                                        </div>
+                                        <div class="d-keybox">
+                                            <div class="d-keybox-head">
+                                                <label class="drop-search">
+                                                    <input type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+                                                    <button class="submit"></button>
+                                                </label>
+                                            </div>
+                                            <div class="d-keybox-body">
+                                                <ul>
+                                                    <li class="d1"><a href="#none">Selling and administrative expenses</a></li>
+                                                    <li class="d2"><a href="#none">Office supplies expense</a></li>
+                                                    <li class="d3"><a href="#none">Office supplies expense-copy paper</a></li>
+                                                    <li class="d2"><a href="#none">Books and periodecals</a></li>
+                                                    <li class="d3"><a href="#none">Books and periodicals</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" value="Pen"></td>
+                                    <td><input type="text" value="KIA"></td>
+                                    <td>
+                                        <select name="Type">
+                                            <option value="New">New</option>
+                                            <option value="vendor">vendor</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="1"></td>
+                                    <td><input type="text" value="1,000"></td>
+                                    <td>
+                                        <select name="ct">
+                                            <option value="DE">DE</option>
+                                            <option value="N">N</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="tax">
+                                            <option value="Y">19%</option>
+                                            <option value="DirectInput">Direct Input</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="-" readonly></td>
+                                    <td>70.00</td>
+                                    <td>1,070.00</td>
+                                    <td><a href="#none" class="btn-del"></a></td>
+                                </tr>
+                                <tr class="input-type">
+                                    <td>2</td>
+                                    <td>
+                                        <div class="drop-key">
+                                            <a href="#none">Office supplies expense</a>
+                                        </div>
+                                        <div class="d-keybox">
+                                            <div class="d-keybox-head">
+                                                <label class="drop-search">
+                                                    <input type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+                                                    <button class="submit"></button>
+                                                </label>
+                                            </div>
+                                            <div class="d-keybox-body">
+                                                <ul>
+                                                    <li class="d1"><a href="#none">Selling and administrative expenses</a></li>
+                                                    <li class="d2"><a href="#none">Office supplies expense</a></li>
+                                                    <li class="d3"><a href="#none">Office supplies expense-copy paper</a></li>
+                                                    <li class="d2"><a href="#none">Books and periodecals</a></li>
+                                                    <li class="d3"><a href="#none">Books and periodicals</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                    <li class="d3"><a href="#none">subscription(SI)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><input type="text" value="Pen"></td>
+                                    <td><input type="text" value="KIA"></td>
+                                    <td>
+                                        <select name="Type">
+                                            <option value="New">New</option>
+                                            <option value="vendor">vendor</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="1"></td>
+                                    <td><input type="text" value="1,000"></td>
+                                    <td>
+                                        <select name="ct">
+                                            <option value="DE">DE</option>
+                                            <option value="N">N</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="tax">
+                                            <option value="DirectInput">Direct Input</option>
+                                            <option value="Y">19%</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" value="-" readonly></td>
+                                    <td>70.00</td>
+                                    <td>1,070.00</td>
+                                    <td><a href="#none" class="btn-del"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>
+                <div class="edit-sub-wrap">
+                    <h5>Description</h5>
+                    <div id="editor"></div>
+                </div>
+                <div class="edit-sub-wrap">
+                    <div class="icon-title">
+                        <h5>Attachment</h5>
+                    </div>
+                    <p class="mb20">
+                        <img src="../../images/ic_check-circle2.svg" alt="">
+                        <strong>Mandatory</strong> ｜ Screenshot for the item
+                    </p>
+                    <div class="attach-wrap withbtn">
+                        <div class="attach-header">
+                            <div class="ah-file">File</div>
+                            <div class="ah-size">Size</div>
+                            <div class="ah-del">Delete</div>
+                        </div>
+                        <div class="attach-body">
+                            <div class="ab-file over2lines"><a href="#none" class="underline-hover">Screenshot for the item.png</a></div>
+                            <div class="ab-size">19.6MB</div>
+                            <div class="ab-del">
+                                <a href="#none" class="btn-del"></a>
                             </div>
                         </div>
-                        <div class="result_area noscroll">
-                            <table class="result_table noselect">
-                                <caption class="hide">리스트</caption>
-                                <colgroup>
-                                    <col style="width: 5%;">
-                                    <col style="width: 14%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 5%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 10%; min-width: 140px;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Classification</th>
-                                        <th>Description</th>
-                                        <th>vendor</th>
-                                        <th>Type</th>
-                                        <th>Qty</th>
-                                        <th>Unit Price</th>
-                                        <th>Contry</th>
-                                        <th>Tax</th>
-                                        <th>Input(%)</th>
-                                        <th>Tax Amount</th>
-                                        <th>Gross Total</th>
-                                        <th>EDIT</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="input-type">
-                                        <td>1</td>
-                                        <td>
-                                            <div class="drop-key">
-                                                <a href="#none">Office supplies expense</a>
-                                            </div>
-                                            <div class="d-keybox">
-                                                <div class="d-keybox-head">
-                                                    <label class="drop-search">
-                                                        <input type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
-                                                        <button class="submit"></button>
-                                                    </label>
-                                                </div>
-                                                <div class="d-keybox-body">
-                                                    <ul>
-                                                        <li class="d1"><a href="#none">Selling and administrative expenses</a></li>
-                                                        <li class="d2"><a href="#none">Office supplies expense</a></li>
-                                                        <li class="d3"><a href="#none">Office supplies expense-copy paper</a></li>
-                                                        <li class="d2"><a href="#none">Books and periodecals</a></li>
-                                                        <li class="d3"><a href="#none">Books and periodicals</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><input type="text" value="Pen"></td>
-                                        <td><input type="text" value="KIA"></td>
-                                        <td>
-                                            <select name="Type">
-                                                <option value="New">New</option>
-                                                <option value="vendor">vendor</option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" value="1"></td>
-                                        <td><input type="text" value="1,000"></td>
-                                        <td>
-                                            <select name="ct">
-                                                <option value="DE">DE</option>
-                                                <option value="N">N</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <select name="tax">
-                                                <option value="Y">19%</option>
-                                                <option value="DirectInput">Direct Input</option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" value="-" readonly></td>
-                                        <td>70.00</td>
-                                        <td>1,070.00</td>
-                                        <td><a href="#none" class="btn-del"></a></td>
-                                    </tr>
-                                    <tr class="input-type">
-                                        <td>2</td>
-                                        <td>
-                                            <div class="drop-key">
-                                                <a href="#none">Office supplies expense</a>
-                                            </div>
-                                            <div class="d-keybox">
-                                                <div class="d-keybox-head">
-                                                    <label class="drop-search">
-                                                        <input type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
-                                                        <button class="submit"></button>
-                                                    </label>
-                                                </div>
-                                                <div class="d-keybox-body">
-                                                    <ul>
-                                                        <li class="d1"><a href="#none">Selling and administrative expenses</a></li>
-                                                        <li class="d2"><a href="#none">Office supplies expense</a></li>
-                                                        <li class="d3"><a href="#none">Office supplies expense-copy paper</a></li>
-                                                        <li class="d2"><a href="#none">Books and periodecals</a></li>
-                                                        <li class="d3"><a href="#none">Books and periodicals</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                        <li class="d3"><a href="#none">subscription(SI)</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td><input type="text" value="Pen"></td>
-                                        <td><input type="text" value="KIA"></td>
-                                        <td>
-                                            <select name="Type">
-                                                <option value="New">New</option>
-                                                <option value="vendor">vendor</option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" value="1"></td>
-                                        <td><input type="text" value="1,000"></td>
-                                        <td>
-                                            <select name="ct">
-                                                <option value="DE">DE</option>
-                                                <option value="N">N</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <select name="tax">
-                                                <option value="DirectInput">Direct Input</option>
-                                                <option value="Y">19%</option>
-                                            </select>
-                                        </td>
-                                        <td><input type="text" value="-" readonly></td>
-                                        <td>70.00</td>
-                                        <td>1,070.00</td>
-                                        <td><a href="#none" class="btn-del"></a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>                    
-                    </div>
-                    <div class="edit-sub-wrap mt20">
-                        <h5>Description</h5>
-                        <div id="editor"></div>
-                    </div>
-                    <div class="edit-sub-wrap mt20">
-                        <div class="icon-title">
-                            <h5>Attachment</h5>
-                        </div>
-                        <p class="mb20">
-                            <img src="../../images/ic_check-circle2.svg" alt="">
-                            <strong>Mandatory</strong> ｜ Screenshot for the item
-                        </p>
-                        <div class="attach-wrap withbtn">
-                            <div class="attach-header">
-                                <div class="ah-file">File</div>
-                                <div class="ah-size">Size</div>
-                                <div class="ah-del">Delete</div>
-                            </div>
-                            <div class="attach-body">
-                                <div class="ab-file over2lines"><a href="#none" class="underline-hover">Screenshot for the item.png</a></div>
-                                <div class="ab-size">19.6MB</div>
-                                <div class="ab-del">
-                                    <a href="#none" class="btn-del"></a>
-                                </div>
-                            </div>
-                            <div class="attach-footer">
-                                <a href="#none" class="add-btn">Add File</a>
-                            </div>
+                        <div class="attach-footer">
+                            <a href="#none" class="add-btn">Add File</a>
                         </div>
                     </div>
                 </div>
@@ -712,7 +698,7 @@
                     <ul class="a-depth2">
                         <li class="d2"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
                         <li class="d2"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
-                        <li class="d2"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                        <li class="d2"><a href="../expense/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
                     </ul>
                 </div>
                 <div id="target5" class="a-target">

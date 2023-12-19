@@ -22,19 +22,6 @@
         // 새 창을 여는 코드
         var popupWindow = window.open('../admin/IMP-UI-008-10-02-01.html', '_blank', 'width=1280, height=980');
     }
-
-    $(document).ready(function() {
-        const Editor = toastui.Editor;
-
-        const editor = new Editor({
-                el: document.querySelector('#editor'),
-                height: '300px',
-                initialEditType: 'markdown',
-                previewStyle: 'vertical'
-            });
-
-        editor.getMarkdown();
-    });
     </script>
 </head>
 <body>
@@ -125,7 +112,7 @@
                     <ul class="two-depth">
                         <li class="d2 one-menu"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
                         <li class="d2 one-menu"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
-                        <li class="d2 one-menu"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                        <li class="d2 one-menu"><a href="../expense/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
                     </ul>
                 </li>
                 <li class="d1">
@@ -373,6 +360,18 @@
                             </div>
                         </label>
                     </fieldset>
+                    <!-- <div class="tr_hashTag_area">
+                        <p><strong>해시태그 구현</strong></p>
+                            <div class="form-group">
+                                <input type="hidden" value="" name="tag" id="rdTag" />
+                            </div>
+                        
+                            <ul id="tag-list"></ul>
+                                        
+                            <div class="form-group">
+                                <input type="text" id="tag" size="7" placeholder="엔터로 해시태그를 등록해주세요." style="width: 300px;"/>
+                            </div>
+                    </div> -->
                 </div>
                 <div class="edit-sub-wrap">
                     <h5>Content</h5>
@@ -525,7 +524,7 @@
                     <ul class="a-depth2">
                         <li class="d2"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
                         <li class="d2"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
-                        <li class="d2"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                        <li class="d2"><a href="../expense/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
                     </ul>
                 </div>
                 <div id="target5" class="a-target">
@@ -599,6 +598,5 @@
         </nav>
     </div>
     <!-- 햄버거 메뉴:e -->
-
 </body>
 </html>

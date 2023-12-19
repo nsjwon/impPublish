@@ -14,20 +14,6 @@
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <title>Order Request Detail</title>
 
-    <script>
-        $(document).ready(function() {
-            const Editor = toastui.Editor;
-    
-            const editor = new Editor({
-                    el: document.querySelector('#editor'),
-                    height: '200px',
-                    initialEditType: 'markdown',
-                    previewStyle: 'vertical'
-                });
-    
-            editor.getMarkdown();
-        });
-    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -117,7 +103,7 @@
                     <ul class="two-depth">
                         <li class="d2 one-menu"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
                         <li class="d2 one-menu"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
-                        <li class="d2 one-menu"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                        <li class="d2 one-menu"><a href="../expense/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
                     </ul>
                 </li>
                 <li class="d1">
@@ -344,82 +330,81 @@
                             <input type="text" name="text" value="Frankfurter Str. 60-68, 65760 Eschborn, Germany" readonly>
                         </label>
                     </fieldset>
-
-                    <div class="edit-sub-wrap mt20">
-                        <div class="e-title">
-                            <h5>Item</h5>
-                        </div>
-                        <div class="result_area noscroll">
-                            <table class="result_table noselect">
-                                <caption class="hide">리스트</caption>
-                                <colgroup>
-                                    <col style="width: 5%;">
-                                    <col style="width: 21%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                    <col style="width: 7%;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Classification</th>
-                                        <th>Item</th>
-                                        <th>vendor</th>
-                                        <th>Type</th>
-                                        <th>Qty</th>
-                                        <th>Unit Price</th>
-                                        <th>Contry</th>
-                                        <th>Tax</th>
-                                        <th>Tax Amount</th>
-                                        <th>Gross Total</th>
-                                        <th>PO</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="input-type">
-                                        <td>1</td>
-                                        <td>Office supplies expense</td>
-                                        <td>Pen</td>
-                                        <td>KIA</td>
-                                        <td>New</td>
-                                        <td>1</td>
-                                        <td>1,000</td>
-                                        <td>DE</td>
-                                        <td>18%</td>
-                                        <td>70</td>
-                                        <td>1,070</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>                    
+                </div>
+                <div class="edit-sub-wrap">
+                    <div class="e-title">
+                        <h5>Item</h5>
                     </div>
-                    <div class="edit-sub-wrap mt20">
-                        <h5>Description</h5>
-                        <div id="editor"></div>
+                    <div class="result_area noscroll">
+                        <table class="result_table noselect">
+                            <caption class="hide">리스트</caption>
+                            <colgroup>
+                                <col style="width: 5%;">
+                                <col style="width: 21%;">
+                                <col style="width: 8%;">
+                                <col style="width: 8%;">
+                                <col style="width: 8%;">
+                                <col style="width: 8%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                                <col style="width: 7%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Classification</th>
+                                    <th>Item</th>
+                                    <th>vendor</th>
+                                    <th>Type</th>
+                                    <th>Qty</th>
+                                    <th>Unit Price</th>
+                                    <th>Contry</th>
+                                    <th>Tax</th>
+                                    <th>Tax Amount</th>
+                                    <th>Gross Total</th>
+                                    <th>PO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="input-type">
+                                    <td>1</td>
+                                    <td>Office supplies expense</td>
+                                    <td>Pen</td>
+                                    <td>KIA</td>
+                                    <td>New</td>
+                                    <td>1</td>
+                                    <td>1,000</td>
+                                    <td>DE</td>
+                                    <td>18%</td>
+                                    <td>70</td>
+                                    <td>1,070</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>
+                <div class="edit-sub-wrap">
+                    <h5>Description</h5>
+                    <div id="editor"></div>
+                </div>
+                <div class="edit-sub-wrap">
+                    <div class="icon-title">
+                        <h5>Attachment</h5>
+                        <img src="../../images/ic_check-circle.svg" alt="">
                     </div>
-                    <div class="edit-sub-wrap mt20">
-                        <div class="icon-title">
-                            <h5>Attachment</h5>
-                            <img src="../../images/ic_check-circle.svg" alt="">
+                    <p class="mb20"><strong>Mandatory</strong> ｜ Screenshot for the item</p>
+                    <div class="attach-wrap">
+                        <div class="attach-header">
+                            <div class="ah-file">File</div>
+                            <div class="ah-size">Size</div>
                         </div>
-                        <p class="mb20"><strong>Mandatory</strong> ｜ Screenshot for the item</p>
-                        <div class="attach-wrap">
-                            <div class="attach-header">
-                                <div class="ah-file">File</div>
-                                <div class="ah-size">Size</div>
-                            </div>
-                            <div class="attach-body">
-                                <div class="ab-file over2lines"><a href="#none">file.png</a></div>
-                                <div class="ab-size">19.6MB</div>
-                            </div>
+                        <div class="attach-body">
+                            <div class="ab-file over2lines"><a href="#none">file.png</a></div>
+                            <div class="ab-size">19.6MB</div>
                         </div>
                     </div>
                 </div>
@@ -533,7 +518,7 @@
                     <ul class="a-depth2">
                         <li class="d2"><a href="../expense/IMP-UI-005-01-01-01.html">Expense plan(ER)</a></li>
                         <li class="d2"><a href="../expense/IMP-UI-005-02-01-01.html">Expense Settlement(EO)</a></li>
-                        <li class="d2"><a href="../order/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
+                        <li class="d2"><a href="../expense/IMP-UI-005-02-04-01.html">Corp Card Settlement</a></li>
                     </ul>
                 </div>
                 <div id="target5" class="a-target">

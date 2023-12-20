@@ -499,6 +499,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#btn-designate").click(function () {
         // 새 창을 여는 코드
-        var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=860');
+        var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=1050');
     });
 });

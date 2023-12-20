@@ -188,6 +188,10 @@ input[type="checkbox"]:focus {outline: none;}
 #btn-order:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-order.svg) no-repeat; transition: all 0.3s ease;}
 #btn-order:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
 #btn-order:hover::after {background: url(../images/ic_btn-order-active.svg) no-repeat;}
+#btn-settle {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; transition: all 0.3s ease;}
+#btn-settle:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-order.svg) no-repeat; transition: all 0.3s ease;}
+#btn-settle:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
+#btn-settle:hover::after {background: url(../images/ic_btn-order-active.svg) no-repeat;}
 #btn-excel {height: 34px; position: relative; border-radius: 4px; background: #F2FBF7; color: #41A074; border: 1px solid #41A074; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;}
 #btn-excel::after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-excel.svg) no-repeat; transition: all 0.3s ease;}
 #btn-excel:hover {background: #41a074; color: #fff; border: 1px solid #41a074;}
@@ -226,12 +230,16 @@ input[type="checkbox"]:focus {outline: none;}
 .btn-removeline:hover::before {background: url(../images/ic_arrow-hover.svg) no-repeat;}
 .btn-blue {position: relative; border-radius: 4px; background: #4577F6; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
 .btn-blue:hover {background: #366bf2;}
+.btn-blueline {position: relative; border-radius: 4px; background: #F6FAFF; border: 1px solid #4577F6; color: #4577F6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px; transition: all .3s;}
+.btn-blueline:hover {background: #366bf2; color: #fff;}
 .btn-grayline {height: 40px; border: 1px solid #676F7E; position: relative; border-radius: 4px; background: #fff; color: #666; font-size: 14px; line-height: 14px; padding: 8px 30px 8px 16px; transition: all .3s;}
 .btn-grayline::after {position: absolute; right: 16px; top: 11px; width: 10px; height: 10px; background: url(../images/btn_addgray.svg) no-repeat; content: ''; display: block; transition: all .3s;}
 .btn-grayline:hover {background: #676F7E; color: #fff;}
 .btn-grayline:hover::after {background: url(../images/btn_add.svg) no-repeat;}
 .btn-red {position: relative; border-radius: 4px; background: #E34C4C; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
 .btn-red:hover {background: #D34444;}
+.btn-redline {position: relative; border-radius: 4px; background: #FFFAF6; color: #D34444; border: 1px solid #D34444; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px; transition: all .3s;}
+.btn-redline:hover {background: #D34444; color: #fff;}
 #btn-download {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; transition: all 0.3s ease;}
 #btn-download:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/btn_download.svg) no-repeat; transition: all 0.3s ease;}
 #btn-download:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
@@ -267,21 +275,26 @@ input[type="checkbox"]:focus {outline: none;}
 .result_table.graybg tbody tr:nth-child(2n-1) td {background: #f8f8f8;}
 .result_table.orangebg tbody tr:nth-child(2n-1) td {background: #fbeadb;}
 .result_table tbody tr:nth-child(2n-1) td {background: #f5f8fd;}
-.result_table tbody tr.graytr td {background: #fff;}
-.result_table tr.bottomT td {border-bottom: 1px solid #999;}
+/* .result_table tbody tr.graytr td {background: #fff;} */
+/* .result_table tr.bottomT td {border-bottom: 1px solid #999;} */
 .result_table tr.topT td {border-top: 1px solid #4f4f4f;}
 .result_table tbody tr td.nonbg {background: none !important;}
-.result_table tbody tr td.orgntd {position: relative; text-align: left;}
-.result_table tbody tr td.orgntd.part1 {padding: 19px 8px 19px 36px;}
-.result_table tbody tr td.orgntd.part1::after {position: absolute; left: 8px; bottom: 19px; width: 15px; height: 15px; background: url(../images/ic_orgn-arrow.svg) no-repeat; content: ''; display: block; background-size: cover;}
-.result_table tbody tr td.orgntd.part1.fold::after {transform: rotate(-90deg);}
-.result_table tbody tr td.orgntd.part2 {padding: 19px 8px 19px 72px;}
-.result_table tbody tr td.orgntd.part2::after {position: absolute; left: 44px; bottom: 19px; width: 15px; height: 15px; background: url(../images/ic_orgn-arrow.svg) no-repeat; content: ''; display: block; background-size: cover;}
-.result_table tbody tr td.orgntd.part2.fold::after {transform: rotate(-90deg);}
-.result_table tbody tr td.orgntd.part3 {padding: 19px 8px 19px 108px;}
-.result_table tbody tr td.orgntd.part3::after {position: absolute; left: 80px; bottom: 19px; width: 15px; height: 15px; background: url(../images/ic_orgn-arrow.svg) no-repeat; content: ''; display: block; background-size: cover;}
-.result_table tbody tr td.orgntd.part3.fold::after {transform: rotate(-90deg);}
-.result_table tbody tr td.orgntd.part4 {padding: 19px 8px 19px 144px;}
+.result_area.dashboard {border: 1px solid #d9d9d9; border-radius: 16px;}
+.result_area.dashboard .result_table {margin-bottom: 0; border-top: 0;}
+.result_area.dashboard .result_table thead th::after {display: none;}
+.result_area.dashboard .result_table tr th {background: var(--bg-color1);}
+.result_area.dashboard tbody tr td.orgntd {position: relative; text-align: left;}
+.result_area.dashboard tbody tr td.orgntd.part1 {padding: 19px 8px 19px 40px; font-weight: 500;}
+.result_area.dashboard tbody tr td.orgntd.part1::after {position: absolute; left: 16px; bottom: 19px; width: 15px; height: 15px; background: url(../images/ic_orgn-arrow.svg) no-repeat; content: ''; display: block; background-size: cover;}
+.result_area.dashboard tbody tr td.orgntd.part1.fold::after {transform: rotate(-90deg);}
+.result_area.dashboard tbody tr td.orgntd.part2 {padding: 19px 8px 19px 72px;}
+.result_area.dashboard tbody tr td.orgntd.part2::after {position: absolute; left: 44px; bottom: 19px; width: 15px; height: 15px; background: url(../images/ic_orgn-arrow.svg) no-repeat; content: ''; display: block; background-size: cover;}
+.result_area.dashboard tbody tr td.orgntd.part2.fold::after {transform: rotate(-90deg);}
+.result_area.dashboard tbody tr td.orgntd.part3 {padding: 19px 8px 19px 108px;}
+.result_area.dashboard tbody tr td.orgntd.part3::after {position: absolute; left: 80px; bottom: 19px; width: 15px; height: 15px; background: url(../images/ic_orgn-arrow.svg) no-repeat; content: ''; display: block; background-size: cover;}
+.result_area.dashboard tbody tr td.orgntd.part3.fold::after {transform: rotate(-90deg);}
+.result_area.dashboard tbody tr td.orgntd.part4 {padding: 19px 8px 19px 144px;}
+.result_area.dashboard tfoot tr td {border-bottom: none;}
 .result_table tbody tr td input[type="text"] {border: 1px solid #d8dadf; border-radius: 4px; background: #fff; padding: 0 10px; height: 30px; font-size: 14px; margin: 0 10px; width: calc(100% - 20px); min-width: 60px;}
 .result_table tbody tr td input[type="text"]:focus, .result_table tbody tr td input[type="date"]:focus, .result_table tbody tr td select:focus {outline: 2px solid #4577F6; border: none; box-shadow: 0px 4px 20px 0px rgba(227, 217, 254, 0.50);}
 .result_table tbody tr td input[type="date"] {border: 1px solid #d8dadf; border-radius: 4px; padding: 0 10px; height: 30px; font-size: 14px; margin: 0 10px; width: calc(100% - 20px);}
@@ -645,7 +658,14 @@ a.underline-hover:hover {text-decoration: underline;}
 .attach-body>div, .attach-body>a {padding: 20px;}
 .attach-body .ab-file {flex: 4; display: flex; justify-content: center;}
 .attach-body .ab-file a {position: relative; display: block;}
-.attach-body .ab-file a::before {position: absolute; left: -24px; top: 0; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file.svg) no-repeat;}
+.attach-body .ab-file a::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file.svg) no-repeat;}
+.attach-body .ab-file a.doc::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file-doc.svg) no-repeat;}
+.attach-body .ab-file a.txt::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file-txt.svg) no-repeat;}
+.attach-body .ab-file a.han::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file-han.svg) no-repeat;}
+.attach-body .ab-file a.pdf::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file-pdf.svg) no-repeat;}
+.attach-body .ab-file a.excel::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file-excel.svg) no-repeat;}
+.attach-body .ab-file a.zip::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file-zip.svg) no-repeat;}
+.attach-body .ab-file a.img::before {position: absolute; left: -22px; top: -1px; display: block; content: ''; width: 18px; height: 18px; background: url(../images/ab-file-img.svg) no-repeat;}
 .attach-body .ab-size {text-align: center; flex: 1;}
 .attach-body .ab-del {text-align: center; flex: 1;}
 .attach-footer {padding-top: 20px; border-top: 1px solid #e8e8e8;}

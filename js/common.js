@@ -341,7 +341,6 @@ $(function(){
     });
 });
 
-
 //모달 오픈
 $(function(){
     // 팝업 열기 버튼 클릭 이벤트
@@ -437,7 +436,7 @@ $(document).ready(function () {
     // 입력한 값을 태그로 생성한다.
     function addTag (value) {
         tag[counter] = value;
-        counter++; // del-btn 의 고유 id 가 된다.
+        counter++; // del-tag 의 고유 id 가 된다.
     }
 
     // tag 안에 있는 값을 array type 으로 만들어서 넘긴다.
@@ -455,7 +454,7 @@ $(document).ready(function () {
         $(this).submit();
     });
 
-    $("#tag").on("keypress", function (e) {
+    $("#hashtag").on("keypress", function (e) {
         var self = $(this);
 
         //엔터나 스페이스바 눌렀을때 실행
@@ -473,11 +472,12 @@ $(document).ready(function () {
             
                 // 해시태그가 중복되었는지 확인
                 if (result.length == 0) { 
-                    $("#tag-list").append("<li class='tag-item'>"+"#"+tagValue+"<span class='del-btn' idx='"+counter+"'></span></li>");
+                    $("#tag-list").append("<li class='tag-item'>"+"#"+tagValue+"<span class='del-tag' idx='"+counter+"'></span></li>");
+                    $("#tag-list").addClass("pt8");
                     addTag(tagValue);
                     self.val("");
                 } else {
-                    alert("태그값이 중복됩니다.");
+                    alert("Tag values are duplicated.");
                 }
             }
             e.preventDefault(); // SpaceBar 시 빈공간이 생기지 않도록 방지
@@ -486,10 +486,17 @@ $(document).ready(function () {
 
     // 삭제 버튼 
     // 인덱스 검사 후 삭제
-    $(document).on("click", ".del-btn", function (e) {
+    $(document).on("click", ".del-tag", function (e) {
         var index = $(this).attr("idx");
         tag[index] = "";
         $(this).parent().remove();
+
+        // .tag-item이 있는지 여부에 따라 .tag-listbox에 pt8 클래스 추가 또는 삭제
+        if ($("#tag-list > .tag-item").length == 0) {
+            $("#tag-list").removeClass("pt8");
+        } else {
+            $("#tag-list").addClass("pt8");
+        }
     });
 })
 
@@ -502,3 +509,4 @@ $(document).ready(function () {
         var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=1050'); 
     });
 });
+

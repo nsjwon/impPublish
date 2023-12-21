@@ -15,18 +15,13 @@
 <body>
     <div id="wrapper">
         <div class="popup-content-wrap">
-            <section class="popup-edit">
-                <div class="edit-title">
-                    <h5 class="flex-al">New Request Mapping</h5>
-                    <div class="l-btnwrap">
-                        <button id="btn-save">
-                            SAVE
-                        </button>
-                        <a id="btn-close" href="#none" onClick='self.close()'>
-                            CLOSE
-                        </a>
-                    </div>
+            <div class="edit-title">
+                <h5 class="flex-al">New Request Mapping</h5>
+                <div class="pop-btn-wrap">
+                    <a href="#none" class="pop-close" onClick='self.close()'></a>
                 </div>
+            </div>
+            <section class="popup-edit">
                 <div class="edit-wrap">
                     <fieldset class="form">
                         <label>URL
@@ -38,7 +33,16 @@
                     </fieldset>
                 </div>
             </section>
+            <div class="l-btnwrap big-button mt40">
+                <button class="btn-save">
+                    SAVE
+                </button>
+                <a class="bt-close" href="#none" onClick='self.close()'>
+                    CLOSE
+                </a>
+            </div>
         </div>
+        
     </div>
 </body>
 </html>

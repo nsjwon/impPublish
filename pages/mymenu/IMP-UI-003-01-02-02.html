@@ -15,13 +15,6 @@
     <title>Approval</title>
 
     <script>
-        $(document).ready(function () {
-            $("#btn-designate").click(function () {
-                // 새 창을 여는 코드
-                var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=1100');
-            });
-        });
-
         function openNewPopup() {
             // 새 창을 여는 코드
             var popupWindow = window.open('../mymenu/IMP-UI-003-01-02-03.html', '_blank', 'width=1360, height=1000');
@@ -284,9 +277,9 @@
                 <div class="edit-title">
                     <h4 class="flex-al"><img src="../../images/ots-mymenu.svg" alt="my menu">Approval</h4>
                     <div class="l-btnwrap">
-                        <button id="btn-designate">
+                        <a class="btn-designate">
                             DESIGNATE
-                        </button>
+                        </a>
                         <button class="btn-blue">
                             Pre Cooperate
                         </button>
@@ -296,7 +289,7 @@
                         <button class="btn-blue modal-button" data-target="#modal-reject">
                             REJECT
                         </button>
-                        <a id="btn-close" href="../mymenu/IMP-UI-003-01-04-01.html">
+                        <a class="bt-close" href="../mymenu/IMP-UI-003-01-04-01.html">
                             CLOSE
                         </a>
                     </div>

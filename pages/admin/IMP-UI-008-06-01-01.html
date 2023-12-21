@@ -18,12 +18,11 @@
                 // 새 창을 여는 코드
                 var popupWindow = window.open('../admin/IMP-UI-008-06-01-02.html', '_blank', 'width=1200, height=960');
             });
-            
-            $("#btn-new").click(function () {
-                // 새 창을 여는 코드
-                var popupWindow = window.open('../admin/IMP-UI-008-06-01-03.html', '_blank', 'width=1200, height=960');
-            });
         });
+        
+        function newpopup() {
+            window.open('../admin/IMP-UI-008-06-01-03.html', '_blank', 'width=1200, height=960');
+        }
     </script>
 
 </head>
@@ -317,8 +316,8 @@
                         </select>
                     </div>
                     <div class="l-btnwrap">
-                        <a id="btn-new" class="btn-effect" href="#none">NEW<img src="../../images/ic_btn-new.svg" class="plus-icon" alt="plus icon"></a>
-                        <button id="btn-excel"><img src="../../images/img_excel.png" alt="excel">EXCEL</button>
+                        <a class="btn-new" href="#none" onclick="newpopup()">NEW<img src="../../images/ic_btn-new.svg" class="plus-icon" alt="plus icon"></a>
+                        <button class="btn-excel"><img src="../../images/img_excel.png" alt="excel">EXCEL</button>
                     </div>
                 </div>
                 <div class="result_area">

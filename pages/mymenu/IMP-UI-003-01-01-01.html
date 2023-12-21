@@ -14,14 +14,6 @@
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <title>Request for Approval</title>
 
-    <script>
-    $(document).ready(function () {
-        $("#btn-designate").click(function () {
-            // 새 창을 여는 코드
-            var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=1050');
-        });
-    });
-    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -301,14 +293,14 @@
                 <div class="edit-title">
                     <h4 class="flex-al"><img src="../../images/ots-mymenu.svg" alt="my menu">Request for Approval</h4>
                     <div class="l-btnwrap">
-                        <!-- <a id="btn-rfa" class="btn-effect" href="#none">RFA</a> -->
-                        <a id="btn-designate" class="btn-effect">
+                        <!-- <a class="btn-rfa" class="btn-effect" href="#none">RFA</a> -->
+                        <a class="btn-designate">
                             DESIGNATE
                         </a>
-                        <button id="btn-save" class="modal-button" data-target="#modal-save">
+                        <button class="btn-save" class="modal-button" data-target="#modal-save">
                             SAVE
                         </button>
-                        <a id="btn-close" href="#none">
+                        <a class="bt-close" href="#none">
                             CLOSE
                         </a>
                     </div>

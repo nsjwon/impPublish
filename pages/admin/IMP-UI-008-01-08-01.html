@@ -12,12 +12,9 @@
     <script src="../../js/slick.min.js"></script>
     <title>Request Mapping</title>
     <script>
-        $(document).ready(function () {
-            $("#btn-new").click(function () {
-                // 새 창을 여는 코드
-                var popupWindow = window.open('../admin/IMP-UI-008-01-08-03.html', '_blank', 'width=1040, height=660');
-            });
-        });
+        function newpopup() {
+            window.open('../admin/IMP-UI-008-01-08-03.html', '_blank', 'width=1040, height=660');
+        }
 
         function editpopup() {
             window.open('../admin/IMP-UI-008-01-08-02.html', '_blank', 'width=1040, height=660');
@@ -309,8 +306,8 @@
                         </select>
                     </div>
                     <div class="l-btnwrap">
-                        <a id="btn-new" id="btn-new" class="btn-effect" href="#none" >NEW<img src="../../images/ic_btn-new.svg" class="plus-icon" alt="plus icon"></a>
-                        <button id="btn-excel"><img src="../../images/img_excel.png" alt="excel">EXCEL</button>
+                        <a class="btn-new" href="#none" onclick="newpopup()">NEW<img src="../../images/ic_btn-new.svg" class="plus-icon" alt="plus icon"></a>
+                        <button class="btn-excel"><img src="../../images/img_excel.png" alt="excel">EXCEL</button>
                     </div>
                 </div>
                 <div class="result_area">

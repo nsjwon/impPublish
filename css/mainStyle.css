@@ -181,38 +181,42 @@ input[type="checkbox"]:focus {outline: none;}
 .l-showhow select {border-radius: 4px; border: 1px solid #eaeaea; background: #fff url('../images/ic_select.svg') no-repeat 100% 50%/34px auto !important; padding: 8px 14px; width: 78px;}
 .l-showhow select:focus {outline: 2px solid #4577F6; border: none; padding: 8px 15px;}
 .l-btnwrap {display: flex; align-items: center; gap: 8px; justify-content: center;}
-#btn-new {position: relative; border-radius: 4px; background: linear-gradient(90deg, #5467E7 0%, #1D92E7  74%); color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 32px 10px 20px;}
-#btn-new.noplus {padding: 10px 20px;}
-#btn-new .plus-icon {position: absolute; top: 12px; right: 16px;}
-#btn-order {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; transition: all 0.3s ease;}
-#btn-order:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-order.svg) no-repeat; transition: all 0.3s ease;}
-#btn-order:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
-#btn-order:hover::after {background: url(../images/ic_btn-order-active.svg) no-repeat;}
-#btn-settle {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; transition: all 0.3s ease;}
-#btn-settle:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-order.svg) no-repeat; transition: all 0.3s ease;}
-#btn-settle:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
-#btn-settle:hover::after {background: url(../images/ic_btn-order-active.svg) no-repeat;}
-#btn-excel {height: 34px; position: relative; border-radius: 4px; background: #F2FBF7; color: #41A074; border: 1px solid #41A074; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;}
-#btn-excel::after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-excel.svg) no-repeat; transition: all 0.3s ease;}
-#btn-excel:hover {background: #41a074; color: #fff; border: 1px solid #41a074;}
-#btn-excel:hover::after {background: url(../images/ic_btn-excel-active.svg) no-repeat;}
+.btn-new {position: relative; border-radius: 4px; background: linear-gradient(90deg, #5467E7 0%, #1D92E7  74%); color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 32px 10px 20px;}
+.btn-new:after {position: absolute; content: ""; width: 100%; height: 0; bottom: 0; left: 0; z-index: -1; border-radius: 4px; background-color: #5467E7; background-image: linear-gradient(90deg, #746AEC 0%, #5267E6 74%); box-shadow: -4px -4px 5px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001; transition: all 0.3s ease;}
+.btn-new:hover {color: #fff;}
+.btn-new:hover:after {top: 0; height: 100%;}
+.btn-new:active {top: 2px;}
+.btn-new.noplus {padding: 10px 20px;}
+.btn-new .plus-icon {position: absolute; top: 12px; right: 16px;}
+.btn-order {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; transition: all 0.3s ease;}
+.btn-order:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-order.svg) no-repeat; transition: all 0.3s ease;}
+.btn-order:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
+.btn-order:hover::after {background: url(../images/ic_btn-order-active.svg) no-repeat;}
+.btn-excel {height: 34px; position: relative; border-radius: 4px; background: #F2FBF7; color: #41A074; border: 1px solid #41A074; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;}
+.btn-excel::after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/ic_btn-excel.svg) no-repeat; transition: all 0.3s ease;}
+.btn-excel:hover {background: #41a074; color: #fff; border: 1px solid #41a074;}
+.btn-excel:hover::after {background: url(../images/ic_btn-excel-active.svg) no-repeat;}
 .btn-del {display: inline-block; width: 20px; height: 20px; background: url(../images/table/ic_delete.svg) no-repeat; background-size: cover;}
 .btnc-up {display: inline-block; width: 20px; height: 20px; background: url(../images/popup/btnc_up.svg) no-repeat; background-size: cover;}
 .btnc-down {display: inline-block; width: 20px; height: 20px; background: url(../images/popup/btnc_down.svg) no-repeat; background-size: cover;}
-#btn-rfa {position: relative; border-radius: 4px; background: linear-gradient(90deg, #5467E7 0%, #1D92E7  74%); color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
-#btn-save {position: relative; border-radius: 4px; background: #4577F6; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
-#btn-save:hover {background: #366bf2;}
-#btn-designate {position: relative; border-radius: 4px; background: linear-gradient(90deg, #5467E7 0%, #1D92E7  74%); color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
-.l-btnwrap #btn-add {height: unset;}
-.l-btnwrap #btn-add::after {top: 12px;}
-#btn-add {height: 40px; position: relative; border-radius: 4px; background: #4577F6; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 34px 10px 20px;}
-#btn-add::after {position: absolute; right: 18px; top: 15px; width: 10px; height: 10px; background: url(../images/btn_add.svg) no-repeat; content: ''; display: block;}
-#btn-add:hover {background: #366bf2;}
-#btn-roleadd {height: 40px; position: relative; border-radius: 4px; background: #4577F6; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 34px 10px 20px;}
-#btn-roleadd::after {position: absolute; right: 18px; top: 15px; width: 10px; height: 10px; background: url(../images/btn_add.svg) no-repeat; content: ''; display: block;}
-#btn-roleadd:hover {background: #366bf2;}
-#btn-close {position: relative; border-radius: 4px; background: #8591A3; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
-#btn-close:hover {background: #6b7d96;}
+.btn-rfa {position: relative; border-radius: 4px; background: linear-gradient(90deg, #5467E7 0%, #1D92E7  74%); color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
+.btn-save {position: relative; border-radius: 4px; background: #4577F6; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
+.btn-save:hover {background: #366bf2;}
+.btn-designate {display: block; position: relative; border-radius: 4px; background: linear-gradient(90deg, #5467E7 0%, #1D92E7  74%); color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
+.btn-designate:after {position: absolute; content: ""; width: 100%; height: 0; bottom: 0; left: 0; z-index: -1; border-radius: 4px; background-color: #5467E7; background-image: linear-gradient(90deg, #746AEC 0%, #5267E6 74%); box-shadow: -4px -4px 5px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001; transition: all 0.3s ease;}
+.btn-designate:hover {color: #fff;}
+.btn-designate:hover:after {top: 0; height: 100%;}
+.btn-designate:active {top: 2px;}
+.l-btnwrap .btn-add {height: unset;}
+.l-btnwrap .btn-add::after {top: 12px;}
+.btn-add {height: 40px; position: relative; border-radius: 4px; background: #4577F6; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 34px 10px 20px;}
+.btn-add::after {position: absolute; right: 18px; top: 15px; width: 10px; height: 10px; background: url(../images/btn_add.svg) no-repeat; content: ''; display: block;}
+.btn-add:hover {background: #366bf2;}
+.btn-roleadd {height: 40px; position: relative; border-radius: 4px; background: #4577F6; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 34px 10px 20px;}
+.btn-roleadd::after {position: absolute; right: 18px; top: 15px; width: 10px; height: 10px; background: url(../images/btn_add.svg) no-repeat; content: ''; display: block;}
+.btn-roleadd:hover {background: #366bf2;}
+.bt-close {position: relative; border-radius: 4px; background: #8591A3; color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
+.bt-close:hover {background: #6b7d96;}
 .btn-effect {position: relative; border-radius: 4px; background: var(--gradient-color2); color: #fff; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px;}
 .btn-effect:after {position: absolute; content: ""; width: 100%; height: 0; bottom: 0; left: 0; z-index: -1; border-radius: 4px; background-color: #5467E7; background-image: linear-gradient(90deg, #746AEC 0%, #5267E6 74%); box-shadow: -4px -4px 5px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001; transition: all 0.3s ease;}
 .btn-effect:hover {color: #fff;}
@@ -240,10 +244,10 @@ input[type="checkbox"]:focus {outline: none;}
 .btn-red:hover {background: #D34444;}
 .btn-redline {position: relative; border-radius: 4px; background: #FFFAF6; color: #D34444; border: 1px solid #D34444; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px; transition: all .3s;}
 .btn-redline:hover {background: #D34444; color: #fff;}
-#btn-download {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; transition: all 0.3s ease;}
-#btn-download:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/btn_download.svg) no-repeat; transition: all 0.3s ease;}
-#btn-download:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
-#btn-download:hover::after {background: url(../images/btn_download-active.svg) no-repeat;}
+.btn-download {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 38px 10px 20px; transition: all 0.3s ease;}
+.btn-download:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; background: url(../images/btn_download.svg) no-repeat; transition: all 0.3s ease;}
+.btn-download:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
+.btn-download:hover::after {background: url(../images/btn_download-active.svg) no-repeat;}
 
 @media (max-width: 500px) {
     .l-utils {flex-direction: column-reverse; gap: 20px;}
@@ -523,8 +527,8 @@ a.underline-hover:hover {text-decoration: underline;}
 
 /* 팝업용 버튼 크기 조절 */
 .l-btnwrap.big-button button, .l-btnwrap.big-button a {width: 180px; height: 46px; display: flex; align-items: center; justify-content: center;}
-.l-btnwrap.big-button #btn-add {height: 46px; width: 180px; padding: 10px 20px;}
-.l-btnwrap.big-button #btn-add::after {display: none;}
+.l-btnwrap.big-button .btn-add {height: 46px; width: 180px; padding: 10px 20px;}
+.l-btnwrap.big-button .btn-add::after {display: none;}
 
 @media (max-width: 420px) {
     .l-btnwrap.big-button button, .l-btnwrap.big-button a {width: 100%;}
@@ -807,11 +811,6 @@ hr.dashed {width: 100%; border: 1px dashed #d9d9d9;}
     .comment-info {flex-direction: row; gap: 20px; width: 100%; max-width: 100%;}
     .comment-txt {width: 100%;}
 }
-
-/* 아이콘 없는 order 버튼 */
-#btn-cooperation {position: relative; border-radius: 4px; background: #F6FAFF; color: #146db6; border: 1px solid #146db6; font-size: 14px; font-weight: 500; line-height: 14px; padding: 10px 20px 10px 20px; transition: all 0.3s ease;}
-#btn-cooperation:after {position: absolute; top: 11px; right: 20px; width: 12px; height: 12px; display: block; content: ''; transition: all 0.3s ease;}
-#btn-cooperation:hover {background: #146db6; color: #fff; border: 1px solid #146db6;}
 
 /* comment textarea */
 .comment-wrap {margin: 0; display: flex; flex-direction: column;}

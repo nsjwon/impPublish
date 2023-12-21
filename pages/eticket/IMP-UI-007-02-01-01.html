@@ -14,14 +14,6 @@
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <title>New Ticket</title>
 
-    <script>
-    $(document).ready(function () {
-        $("#btn-designate").click(function () {
-            // 새 창을 여는 코드
-            var popupWindow = window.open('../mymenu/IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=860');
-        });
-    });
-    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -290,14 +282,14 @@
                 <div class="edit-title">
                     <h4 class="flex-al"><img src="../../images/ots-eticket.svg" alt="e-Ticket">New Ticket</h4>
                     <div class="l-btnwrap">
-                        <!-- <a id="btn-rfa" class="btn-effect" href="#none">RFA</a> -->
-                        <button id="btn-designate">
+                        <!-- <a class="btn-rfa" class="btn-effect" href="#none">RFA</a> -->
+                        <a class="btn-designate">
                             DESIGNATE
-                        </button>
-                        <button id="btn-save" class="modal-button" data-target="#modal-save">
+                        </a>
+                        <button class="btn-save" class="modal-button" data-target="#modal-save">
                             SAVE
                         </button>
-                        <a id="btn-close" href="../eticket/IMP-UI-007-03-01-01.html">
+                        <a class="bt-close" href="../eticket/IMP-UI-007-03-01-01.html">
                             CLOSE
                         </a>
                     </div>

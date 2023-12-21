@@ -14,14 +14,6 @@
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <title>Approval</title>
 
-    <script>
-    $(document).ready(function () {
-        $("#btn-designate").click(function () {
-            // 새 창을 여는 코드
-            var popupWindow = window.open('IMP-UI-003-01-01-02.html', '_blank', 'width=1200, height=860');
-        });
-    });
-    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -287,16 +279,16 @@
                 <div class="edit-title">
                     <h4 class="flex-al"><img src="../../images/ots-mymenu.svg" alt="my menu">Approval</h4>
                     <div class="l-btnwrap">
-                        <button id="btn-cooperation">
+                        <button class="btn-blueline">
                             Designating a cooperative person
                         </button>
-                        <button id="btn-designate">
+                        <button class="btn-effect">
                             Cooperate Approval
                         </button>
-                        <button id="btn-designate">
+                        <a class="btn-designate">
                             Cooperate Reject
-                        </button>
-                        <a id="btn-close" href="../mymenu/IMP-UI-003-01-04-01.html">
+                        </a>
+                        <a class="bt-close" href="../mymenu/IMP-UI-003-01-04-01.html">
                             CLOSE
                         </a>
                     </div>

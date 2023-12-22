@@ -279,8 +279,6 @@ input[type="checkbox"]:focus {outline: none;}
 .result_table.graybg tbody tr:nth-child(2n-1) td {background: #f8f8f8;}
 .result_table.orangebg tbody tr:nth-child(2n-1) td {background: #fbeadb;}
 .result_table tbody tr:nth-child(2n-1) td {background: #f5f8fd;}
-/* .result_table tbody tr.graytr td {background: #fff;} */
-/* .result_table tr.bottomT td {border-bottom: 1px solid #999;} */
 .result_table tr.topT td {border-top: 1px solid #4f4f4f;}
 .result_table tbody tr td.nonbg {background: none !important;}
 .result_area.dashboard {border: 1px solid #d9d9d9; border-radius: 16px;}
@@ -602,6 +600,11 @@ a.underline-hover:hover {text-decoration: underline;}
 .coop-select-wrap .c-member select {width: 100%; margin-top: 8px; border: 1px solid #d8dadf; border-radius: 4px;  background: #fff url('../images/ic_select.svg') no-repeat 100% 50%/34px auto !important; padding: 10px; height: 40px; font-size: 14px;}
 .coop-select-wrap .c-member select:disabled {background: #e8e8e8 url('../images/ic_select.svg') no-repeat 100% 50%/34px auto !important;}
 .coop-select-wrap .c-member select:disabled:focus {outline: none !important;  border: none; box-shadow: none;}
+
+/* 테이블형식 결재라인 */
+.ap-wrap {display: flex; flex-direction: column; border: 1px solid #d8dadf;}
+.ap-title {font-size: 12px; font-weight: 500; color: #4577F6; border-right: 1px solid #d8dadf; border-bottom: 1px solid #d8dadf; background: #f7f9fd;}
+
 
 
 @media (max-width: 1500px) {

@@ -5,6 +5,7 @@ Author : jwshin
 Create date : 2023-10-23
 Version : v1.0
 Version : v2.0 (2023-12-19)
+Version : v2.1 (2023-12-27)
 -------------------------------------------------*/
 /* LoginPage Style */
 .login-wrap {display: flex;}
@@ -167,7 +168,7 @@ input[type="checkbox"]:focus {outline: none;}
 .dateform {display: flex; align-items: center;}
 .dateform.oneform {display: flex; align-items: center; justify-content: flex-end; width: 100%;}
 .dateform.oneform .date input {min-width: 200px;}
-.dateform .date {display: flex; align-items: center;}
+.dateform .date {display: flex; align-items: center; flex: 1;}
 .dateform .date span {margin: 0 10px !important;}
 .srchform input {width: 100%; border: 1px solid #d8dadf; border-radius: 4px; padding: 10px;}
 
@@ -623,7 +624,7 @@ a.underline-hover:hover {text-decoration: underline;}
 .ap-name {height: 40px;}
 .ap-cooper {display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 20px; font-size: 12px;}
 
-.ap-refer {height: 60px; display: flex; align-items: center; gap: 10px; font-size: 12px; padding: 0 20px;}
+.ap-refer {height: 40px; display: flex; align-items: center; gap: 10px; font-size: 12px; padding: 0 20px;}
 /* .ap-refer li {border: 1px solid #d9d9d9; padding: 6px 10px; border-radius: 4px;} */
 
 @media (max-width: 1500px) {
@@ -657,8 +658,6 @@ a.underline-hover:hover {text-decoration: underline;}
 .btn-coop2::after {position: absolute; right: 8px; top: 6px; width: 18px; height: 18px; display: block; content: ''; background: url(../images/ic_view2.svg) no-repeat; background-size: cover; transition: all .3s;}
 .btn-coop2:hover {background: #4577F6; color: #fff;}
 .btn-coop2:hover::after {background: url(../images/ic_view-hover2.svg) no-repeat;}
-
-
 
 @media (max-width: 500px) {
     .bg-field {padding: 20px;}

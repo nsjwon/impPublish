@@ -181,9 +181,40 @@
   font-style: normal;
 }
 .result_area .tui-grid-container .tui-grid-pagination {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
-.result_area .tui-grid-clipboard {
+.result_area .tui-grid-pagination .tui-page-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  color: #676767;
+  transition: all .3s;
+  font-size: 14px;
+}
+.result_area .tui-grid-pagination .tui-page-btn.tui-is-selected {background: #4D525A; color: #fff; font-weight: 500;}
+.result_area .tui-grid-pagination .tui-page-btn:hover {background: #4D525A; color: #fff; opacity: 0.5; border-radius: 50%;}
+
+.result_area .tui-grid-pagination .tui-page-btn.tui-first {background: url(../../images/table/ic_page_first.svg) no-repeat; border: none; cursor: pointer;}
+.result_area .tui-grid-pagination .tui-page-btn.tui-first:hover {background: url(../../images/table/ic_page_first-hover.svg) no-repeat;}
+.result_area .tui-grid-pagination .tui-page-btn.tui-prev {background: url(../../images/table/ic_page_pre.svg) no-repeat; border: none; cursor: pointer;}
+.result_area .tui-grid-pagination .tui-page-btn.tui-prev:hover {background: url(../../images/table/ic_page_pre-hover.svg) no-repeat;}
+.result_area .tui-grid-pagination .tui-page-btn.tui-next {background: url(../../images/table/ic_page_next.svg) no-repeat; border: none; cursor: pointer;}
+.result_area .tui-grid-pagination .tui-page-btn.tui-next:hover {background: url(../../images/table/ic_page_next-hover.svg) no-repeat;}
+.result_area .tui-grid-pagination .tui-page-btn.tui-last {background: url(../../images/table/ic_page_last.svg) no-repeat; border: none; cursor: pointer;}
+.result_area .tui-grid-pagination .tui-page-btn.tui-last:hover {background: url(../../images/table/ic_page_last-hover.svg) no-repeat;}
+.result_area .tui-grid-pagination .tui-page-btn>span {display: none;}
+.pageDiv {display: flex; align-items: center; justify-content: flex-end; font-size: 12px; gap: 8px}
+
+
+.result_area .tui-grid-pagination .tui-grid-clipboard {
   position: fixed;
   top: 0px;
   left: -9999px;
@@ -359,7 +390,7 @@
   overflow: hidden; */
   font-size: 13px;
   text-align: center;
-  padding: 19px 8px;
+  /*padding: 19px 8px;*/
   border-bottom: 1px solid #e8e8e8;
 }
 
@@ -435,8 +466,8 @@
   display: block;
   overflow: hidden;
   line-height: 1.5;
-  *margin-left: -2px;
-  *padding-left: 2px;
+  margin-left: -2px;
+  padding-left: 2px;
 }
 .result_area .tui-grid-cell-content input[type='text'],
 .result_area .tui-grid-cell-content input[type='password'] {
@@ -984,6 +1015,24 @@
 }
 
 /* input datepicker icon */
+.dateform .tui-datepicker {
+  z-index: 99;
+}
+
+.dateform .tui-datepicker-input {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.dateform .tui-datetime-input {
+  width: 100%;
+}
+
+.dateform .tui-datepicker-input > .tui-ico-date {
+  top: calc(50% - 6px);
+}
+
 .result_area .tui-grid-datepicker-input-container {
   position: relative;
 }

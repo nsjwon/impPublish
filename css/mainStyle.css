@@ -274,7 +274,7 @@ input[type="checkbox"]:focus {outline: none;}
 .result_table thead th.noborder::after {display: none !important;}
 .result_table thead th.row2::after {width: 1px; height: calc(100% - 36px); right: 10px; top: 18px; background: #e4e4e4; content: ''; display: block; position: absolute;}
 .result_table thead th:last-child::after {display: none;}
-.result_table thead th .btn-sorter {width: 8px; height: 16px; background: url(../images/table/btn-sorter.svg) no-repeat; margin-left: 10px; padding-bottom: 3px;}
+.result_table thead th .btn-sorter {width: 8px; height: 16px; background: url(../images/table/btn_sorter.svg) no-repeat; margin-left: 10px; padding-bottom: 3px;}
 .result_table tbody tr td {font-size: 13px; text-align: center; padding: 19px 8px; border-bottom: 1px solid #e8e8e8;}
 .result_table tbody tr.input-type td {padding: 12px 0px;}
 .result_table tbody tr.btn-type td {padding: 8px 0px;}

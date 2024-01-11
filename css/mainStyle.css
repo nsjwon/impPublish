@@ -606,14 +606,14 @@ a.underline-hover:hover {text-decoration: underline;}
 /* 결재선 수정 */
 .ap-wrap {display: flex; flex-direction: column; border: 1px solid #d8dadf; border-bottom-color: #fff;}
 .ap-box {display: flex; width: 100%;}
-.ap-title {display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; color: #4577F6; border-right: 1px solid #d8dadf; border-bottom: 1px solid #d8dadf; background: #f7f9fd; width: 160px;}
+.ap-title {display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; color: #4577F6; border-right: 1px solid #d8dadf; border-bottom: 1px solid #d8dadf; background: #f7f9fd; width: 180px;}
 .ap-title>a {display: flex; align-items: center; justify-content: center; gap: 4px;}
 .ap-body {flex: 1; border-bottom: 1px solid #d8dadf; display: flex;}
-.ap-info {display: flex; align-items: center; justify-content: center; border-right: 1px solid #d8dadf; width: 160px;}
+.ap-info {display: flex; align-items: center; justify-content: center; border-right: 1px solid #d8dadf; width: 180px;}
 .ap-info img {width: 14px;}
 .ap-info.noborderB {border-bottom: none;}
-.ap-position {background: #f7f9fd; height: 40px; border-bottom: 1px solid #d8dadf; font-weight: 500; font-size: 12px;}
-.ap-status {position: relative; height: 80px; border-bottom: 1px solid #d8dadf; display: flex; flex-direction: column; gap: 12px; font-size: 12px;}
+.ap-position {background: #f7f9fd; height: 50px; border-bottom: 1px solid #d8dadf; font-weight: 500; font-size: 14px;}
+.ap-status {position: relative; height: 100px; border-bottom: 1px solid #d8dadf; display: flex; flex-direction: column; gap: 12px; font-size: 14px;}
 .ap-num {position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-right: 1px solid #d8dadf; border-bottom: 1px solid #d8dadf; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #aaa;}
 .ap-stamp {width: 60px; height: 60px; border-radius: 50%; border: 2px solid #fff; display: flex; align-items: center; justify-content: center;}
 .ap-stamp span {font-size: 11px; font-weight: 700;}
@@ -621,10 +621,10 @@ a.underline-hover:hover {text-decoration: underline;}
 .ap-stamp.rejected {border-color: #E34C4C; color: #E34C4C;}
 .ap-stamp.precoop {border-color: #FFA841; color: #FFA841;}
 .ap-stamp.mailnoti {border-color: #52C0FE; color: #52C0FE;}
-.ap-name {height: 40px;}
-.ap-cooper {display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding: 20px; font-size: 12px;}
+.ap-name {height: 50px;}
+.ap-cooper {display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 20px 24px; font-size: 14px;}
 
-.ap-refer {height: 40px; display: flex; align-items: center; gap: 10px; font-size: 12px; padding: 0 20px;}
+.ap-refer {display: flex; align-items: center; gap: 10px; font-size: 14px; padding: 0px 24px; height: 50px;}
 /* .ap-refer li {border: 1px solid #d9d9d9; padding: 6px 10px; border-radius: 4px;} */
 
 @media (max-width: 1500px) {
@@ -654,8 +654,8 @@ a.underline-hover:hover {text-decoration: underline;}
 .btn-coop::after {position: absolute; right: 12px; top: 6px; width: 18px; height: 18px; display: block; content: ''; background: url(../images/ic_view.svg) no-repeat; background-size: cover; transition: all .3s;}
 .btn-coop:hover {background: #E34C4C; color: #fff;}
 .btn-coop:hover::after {background: url(../images/ic_view-hover.svg) no-repeat;}
-.btn-coop2 {position: relative; display: block; border: 1px solid #4577F6; width: fit-content; border-radius: 4px; background: #fff; color: #4577F6; font-size: 12px; line-height: 14px; padding: 8px 30px 8px 12px; transition: all .3s; font-weight: 400;}
-.btn-coop2::after {position: absolute; right: 8px; top: 6px; width: 18px; height: 18px; display: block; content: ''; background: url(../images/ic_view2.svg) no-repeat; background-size: cover; transition: all .3s;}
+.btn-coop2 {position: relative; display: block; border: 1px solid #4577F6; width: fit-content; border-radius: 4px; background: #fff; color: #4577F6; font-size: 12px; line-height: 14px; padding: 12px 34px 12px 16px; transition: all .3s; font-weight: 400;}
+.btn-coop2::after {position: absolute; right: 13px; top: 10px; width: 18px; height: 18px; display: block; content: ''; background: url(../images/ic_view2.svg) no-repeat; background-size: cover; transition: all .3s;}
 .btn-coop2:hover {background: #4577F6; color: #fff;}
 .btn-coop2:hover::after {background: url(../images/ic_view-hover2.svg) no-repeat;}
 

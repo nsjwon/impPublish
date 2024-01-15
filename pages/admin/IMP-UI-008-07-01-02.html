@@ -15,6 +15,12 @@
     <title>Journalizing(Incoming)</title>
 
     <script>
+        $(document).ready(function () {
+            $(".ic_lens").click(function () {
+                // 새 창을 여는 코드
+                var popupWindow = window.open('../../doc-detail-popup.html', '_blank', 'width=1400, height=1080');
+            });
+        });
     </script>
 </head>
 <body>
@@ -301,8 +307,12 @@
                         </label>
                     </fieldset>
                     <fieldset class="form">
+                        <label>Req No
+                            <input type="text" name="text" value="ER2310060001" readonly>
+                            <a href="#none" class="ic_lens"></a>
+                        </label>
                         <label>Doc No
-                            <input type="text" name="dn" value="Vodafone GmbH" readonly>
+                            <input type="text" name="dn" value="DO2310060001" readonly>
                         </label>
                         <label>Document Date
                             <input type="date" name="dd">
@@ -315,14 +325,14 @@
                         <label>Fiscal Year
                             <input type="text" name="fy" value="2023" readonly>
                         </label>
-                        <label>Req No
-                            <input type="text" name="pn">
-                        </label>
                         <label>Currency
                             <input type="text" name="crr" value="EUR" readonly>
                         </label>
                         <label>Biz Area
-                            <input type="text" name="bz" value="1200" readonly>
+                            <input type="text" name="bz" value="Eschborn(1200)" readonly>
+                        </label>
+                        <label>SAP No
+                            <input type="text" name="fy" readonly>
                         </label>
                     </fieldset>
                     <fieldset class="form">
@@ -331,10 +341,7 @@
                         </label>
                         <label>Transferred Date
                             <input type="text" name="fy" readonly>
-                        </label>
-                        <label>SAP No
-                            <input type="text" name="fy" readonly>
-                        </label>
+                        </label> 
                         <label>SAP Reverse No
                             <input type="text" name="fy" readonly>
                         </label>
@@ -342,12 +349,18 @@
                             <input type="text" name="fy" readonly>
                         </label>
                     </fieldset>
-                    <fieldset class="form">
+                    <fieldset class="form tem3">
                         <label>I/F Result
-                            <input type="text" name="if" readonly>
+                            <input type="text" name="if" value="S" readonly>
                         </label>
-                        <label>Message
-                            <input type="text" name="mss" readonly>
+                        <label class="wide">Message
+                            <input type="text" name="mss" value="Booking succeeded" readonly>
+                        </label>
+                        <label></label>
+                    </fieldset>
+                    <fieldset class="form">
+                        <label>Invoice No
+                            <input type="text" name="in" value="RG23+70691">
                         </label>
                     </fieldset>
                 </div>

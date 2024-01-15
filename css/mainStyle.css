@@ -710,6 +710,7 @@ a.underline-hover:hover {text-decoration: underline;}
 .sap-wrap {display: flex; flex-direction: column; border-top: 1px solid #666;}
 .sap-header {width: 100%; display: flex; align-items: center; border-bottom: 1px solid #e8e8e8;}
 .sap-header .sap-title {position: relative; flex: 1; color: #1c1d1f; font-weight: 500; padding: 20px; text-wrap: wrap; text-align: center;}
+.sap-header .sap-title:last-child::after {display: none;}
 .sap-header .sap-title::after {width: 1px; height: calc(100% - 36px); right: 0; top: 18px; background: #e4e4e4; content: ''; display: block; position: absolute;}
 .sap-body {width: 100%; display: flex; align-items: center; background: #f5f8fd; border-bottom: 1px solid #e8e8e8;}
 .sap-body .sap-data {flex: 1; padding: 20px; text-wrap: wrap; text-align: center; font-size: 14px;}

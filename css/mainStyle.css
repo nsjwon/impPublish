@@ -770,6 +770,8 @@ hr.dashed {width: 100%; border: 1px dashed #d9d9d9;}
 .ct-1depth-title span.date {font-size: 13px;}
 .cmu-title {display: flex; flex-direction: column; gap: 10px;}
 .cmu-title>p {text-align: left; font-size: 15px; width: fit-content; line-height: 24px;}
+.cmu-title>p.withfile {position: relative;}
+.cmu-title>p.withfile::after {position: absolute; width: 20px; height: 20px; content: ''; display: block; top: 0px; right: -24px; background: url(../images/ic_withfile.svg) no-repeat; background-size: contain;}
 .cmu-title>p:hover {text-decoration: underline; cursor: pointer;}
 .cmu-title>p.pin {font-weight: 600;}
 .search-tag {display: flex; align-items: center; gap: 8px; flex-wrap: wrap;}
@@ -871,3 +873,12 @@ span.left-days-red {color:#ff0000; padding-left:5px;}
 
 /* label 너비추가  */
 .edit-wrap .form-wrap {display: flex; flex-wrap: wrap; flex: 1; align-items: flex-end; justify-content: flex-start; gap: 8px;}
+
+/* BT Plan Status */
+.stlabel {display: inline-block; padding: 6px 12px; border-radius: 20px; font-size: 12px; line-height: 12px; text-align: center;}
+.stlabel.Processing {color: #146db6; background: #E9EFF9;}
+.stlabel.Saved {color: #FFA800; background: #FFF2D0;}
+.stlabel.Approved {color: #389A63; background: #E1F9DB;}
+.stlabel.Withdrew {color: #886EF0; background: #EBE5FF;}
+.stlabel.Canceled {color: #C75FB0; background: #FCE4F2;}
+.stlabel.Rejected {color: #E34C4C; background: #FFEDE8;}

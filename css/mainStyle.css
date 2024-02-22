@@ -83,60 +83,6 @@ Version : v3.0 (2023-02-22)
 a.seemore {font-size: 12px;}
 a.seemore:hover {color: var(--main-color2);}
 
-/* 메인 커뮤니티 영역*/
-/* .community-wrap {width: 390px; margin: 20px 20px 20px 0; background: #f5f8fd; border-radius: 20px; padding: 98px 40px;}
-.comm-wrap {display: flex; flex-direction: column; gap: 26px;}
-.comm-card {width: 100%; padding: 30px 27px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; background: #fff; border-radius: 16px; transition: all .3s; border: 1px solid #D4DBE8; box-shadow: 0px 12px 32px 0px rgba(8, 18, 69, 0.10);}
-.comm-card:hover {color: #fff; border: 1px solid #187FD7; box-shadow: 0px 12px 32px 0px rgba(8, 18, 69, 0.15); background: url(../images/bg_communitybox.png) no-repeat; background-size: cover;}
-.comm-card:hover p {text-decoration: underline; font-weight: 500;}
-.comm-card .board-label {display: flex; padding: 5px 12px; align-items: center; font-size: 12px; border-radius: 14px;}
-.comm-manage .board-label {color: #146db6; background: #e9eff9; border: 1px solid #e9eff9;}
-.comm-info .board-label {color: #d25b06; background: #fbf2db; border: 1px solid #fbf2db;}
-.comm-legal .board-label {color: #389A63; background: #E1F9DB; border: 1px solid #E1F9DB;}
-.comm-card:hover .board-label {color: #fff !important; background: none !important; border: 1px solid #fff !important;}
-.comm-card p {line-height: 22px; height: 44px; width: 100%;}
-.comm-card ul {display: flex; align-items: center; gap: 10px; font-size: 12px; color: #a5acb7;}
-.comm-card:hover ul {color: #fff;}
-.comm-card ul li.round {width: 4px; height: 4px; border-radius: 2px; background: #a5acb7;} */
-
-
-/* 메인 커뮤니티 영역 수정안 추가*/
-.main-all-wrap {display: flex; justify-content: space-between; gap: 50px;}
-.main-right-wrap {width: calc(100% - 440px);}
-.community-wrap {width: 390px; padding-top: 36px;}
-.comm-wrap {display: flex; flex-direction: column; gap: 26px;}
-.comm-card {cursor: pointer; width: 100%; padding: 32px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; border-radius: 16px; transition: all .3s; border: 1px solid transparent;}
-.comm-card:hover {box-shadow: 0px 12px 32px 0px rgba(8, 18, 69, 0.05);}
-.comm-card:hover p.cb-title {text-decoration: underline;}
-.comm-card.comm-manage {background: #EDF3FF;}
-.comm-card.comm-info {background: #FEF4E6;}
-.comm-card.comm-legal {background: #F1FDEE;}
-.comm-card.comm-manage:hover {border: 1px solid #146db6;}
-.comm-card.comm-info:hover {border: 1px solid #EE6504;}
-.comm-card.comm-legal:hover {border: 1px solid #389A63;}
-.cb-category {width: 100%; display: flex; align-items: center; justify-content: space-between;}
-.comm-card .board-label {font-size: 16px; font-weight: 500; line-height: 20px;}
-.comm-manage .board-label {color: #146db6;}
-.comm-info .board-label {color: #EE6504;}
-.comm-legal .board-label {color: #389A63;}
-.comm-card .cb-more {display: block; width: 16px; height: 16px;}
-.comm-manage .cb-more {background: url(../images/ic_cbmore1.svg) no-repeat; background-size: cover;}
-.comm-info .cb-more {background: url(../images/ic_cbmore2.svg) no-repeat; background-size: cover;}
-.comm-legal .cb-more {background: url(../images/ic_cbmore3.svg) no-repeat; background-size: cover;}
-.comm-card p.cb-title {line-height: 22px; width: 100%; font-weight: 500; height: 44px;}
-.comm-card p.cb-text {line-height: 22px; height: 44px; width: 100%; margin-bottom: 24px;}
-.comm-manage p.cb-text {color: #676F7E;}
-.comm-info p.cb-text {color: #817268;}
-.comm-legal p.cb-text {color: #6C8383;}
-.comm-card ul {display: flex; align-items: center; gap: 10px; font-size: 12px; color: #a5acb7;}
-.comm-manage ul {color: #9DA7B6;}
-.comm-info ul {color: #C8B2A1;}
-.comm-legal ul {color: #A3C2BC;}
-.comm-card ul li.round {width: 4px; height: 4px; border-radius: 2px;}
-.comm-manage ul li.round {background: #B8C2D0;}
-.comm-info ul li.round {background: #DCCABB;}
-.comm-legal ul li.round {background: #BEDCD6;}
-
 
 .ticket {background: var(--bg-color1); border-radius: 16px; padding: 26px 30px; display: flex; align-items: center; justify-content: space-between;}
 .ticket-wrap > .ticket:nth-child(2n) {background: none;}

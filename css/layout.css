@@ -3,6 +3,7 @@ Author : jwshin
 Create date : 2023-10-23
 Version : v1.0
 Version : v2.0 (2023-12-19)
+Version : v3.0 (2023-02-22)
 -------------------------------------------------*/
 
 /* Layout Style */
@@ -66,16 +67,21 @@ Version : v2.0 (2023-12-19)
 .two-depth .d2 {width: 100%; height: 100%; display: flex; align-items: center; flex-direction: column; color: #fff;}
 .two-depth .d2.active {color: #1badff;}
 .two-depth .d2.active>a::before {background: url(../images/ic_2depth_active.svg) no-repeat;}
+.two-depth .d2.active>a:hover::before {background: url(../images/ic_2depth_active.svg) no-repeat;}
 .two-depth .d2>a {position: relative; width: 100%; height: 34px; display: flex; align-items: center; font-weight: 400; font-size: 14px; background: #202833; padding-left: 40px;}
+.two-depth .d2>a:hover {color: #1badff;}
 .two-depth .d2>a::before {width: 14px; height: 14px; background: url(../images/ic_2depth.svg) no-repeat; content: ''; display: block; margin-right: 8px;}
+.two-depth .d2>a:hover::before {width: 14px; height: 14px; background: url(../images/ic_2depth_hover.svg) no-repeat; content: ''; display: block; margin-right: 8px;}
 .two-depth .d2.one-menu>a::before {width: 14px; height: 14px; background: url(../images/ic_2depth-only.svg) no-repeat; content: ''; display: block; margin-right: 8px;}
+.two-depth .d2.one-menu:hover>a::before {width: 14px; height: 14px; background: url(../images/ic_2depth-only_hover.svg) no-repeat; content: ''; display: block; margin-right: 8px;}
+.two-depth .d2.one-menu.active>a::before {background: url(../images/ic_2depth-only_hover.svg) no-repeat;}
 .three-depth {padding-bottom: 10px;}
 .three-depth>li {list-style: disc; font-weight: 400; font-size: 13px; color: #fff; line-height: 25px; margin-left: 10px;}
 .three-depth>li>a {width: 140px; display: flex;}
 .three-depth>li:hover {text-decoration: underline; color: #1badff;}
-.three-depth>li.this {text-decoration: underline; color: #1badff;}
+.three-depth>li.active {text-decoration: underline; color: #1badff;}
 header {height: 70px; width: 100%; border-bottom: 1px solid #ededed; display: flex; justify-content: space-between; align-items: center; padding: 0 50px;}
-.id-info {display: flex; justify-content: space-between; font-size: 14px; flex-direction: column; width: 120px; position: relative;}
+.id-info {display: flex; justify-content: space-between; font-size: 14px; flex-direction: column; margin-left: 14px; padding-right: 24px; position: relative;}
 .id-info::after {position: absolute; width: 12px; height: 7px; content: ''; display: block; right: 0; top: 14.5px; background: url(../images/ic_dropdown-id.svg) no-repeat;}
 .id-info em {color: #2c2e35; font-weight: 500;}
 .id-info span {color: #acacac;}
@@ -103,7 +109,7 @@ header .side-fold.fold:hover {background: url(../images/ic_header-menu-active.sv
 .sub-content-wrap {width: calc(100% - 280px);}
 .sub-content-wrap.stretch {width: calc(100% - 70px);}
 .sub-content-wrap.w100 {width: 100%;}
-.community-wrap {width: 400px; margin: 20px 20px 20px 0; background: #f5f8fd; border-radius: 20px;}
+
 
 /* Hamburger Menu Style */
 /* Hamburger Button */
@@ -124,7 +130,11 @@ header .side-fold.fold:hover {background: url(../images/ic_header-menu-active.sv
 
 /* Menu Layout */
 header .header-util {gap: 20px; position: relative;}
-.header-util .settings {position: absolute; left: 0; top: 30px; display: block; z-index: -1; border: 1px solid #d9d9d9; background: #fff; opacity: 0; width: 100%; height: fit-content; border-radius: 8px; transition: all .5s;}
+.header-util .time-info {display: flex; flex-direction: column; position: relative; padding-left: 26px;}
+.header-util .time-info:after {position: absolute; top: 1px; left: 0; width: 18px; height: 18px; content: ''; display: block; background: url("../images/ic_header-time.svg") no-repeat; background-size: cover;}
+.header-util .time-info p {font-size: 13px; color: #2C2E35; line-height: 18px; font-weight: 500;}
+.header-util .time-info span {color: #acacac; font-weight: 400; font-size: 14px;}
+.header-util .settings {position: absolute; right: 0; top: 30px; display: block; z-index: -1; border: 1px solid #d9d9d9; background: #fff; opacity: 0; width: calc(100% - 184px); height: fit-content; border-radius: 8px; transition: all .5s;}
 .header-util .settings.on {top: 50px; display: block; opacity: 1; z-index: 11;}
 .settings-box {display: flex; flex-direction: column;}
 .settings-box>ul>li>a {display: flex; align-items: center; padding: 20px; width: 100%; color: #2c2e35;}
@@ -189,7 +199,8 @@ header .mobile-home {z-index: 10; transition: none; display: none;}
 .modal-panel {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100; transition: all .5s;}
 .modal-panel.is-active {display: block;}
 .modal-panel .modal-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
-.modal-panel .modal-content {overflow: hidden; display: block; padding: 40px; position: absolute; top: 50%; left: 50%; opacity: 0; transform: translate(-50%, -48%); width: fit-content; height: fit-content; border-radius: 10px; background-color:#fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.25); transition: all .5s;}
+/*.modal-panel .modal-content {overflow: hidden; display: block; padding: 40px; position: absolute; top: 50%; left: 50%; opacity: 0; transform: translate(-50%, -48%); width: fit-content; height: fit-content; border-radius: 10px; background-color:#fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.25); transition: all .5s;}*/
+.modal-panel .modal-content {display: block; padding: 40px; position: absolute; top: 50%; left: 50%; opacity: 0; transform: translate(-50%, -48%); width: fit-content; height: fit-content; border-radius: 10px; background-color:#fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.25); transition: all .5s;}
 .modal-panel .modal-content.is-active {opacity: 1; transform: translate(-50%, -50%);}
 .modal-panel .modal-content .modal-header {padding-bottom: 20px; display: flex; align-items: center; justify-content: space-between; font-size: 24px; border-bottom: 1px solid #d8dadf;}
 .modal-body {margin: 20px 0;}
